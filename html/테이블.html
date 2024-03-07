@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 테이블(Table)</title>
+</head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse; /*테이블의 줄을 한줄로 만들어준다*/
+        }
+    </style>
+<body>
+    <!-- 테이블이란 여러 종류의 데이터를 보기 좋게 정리한 표 : <table>태그 사용
+
+        ※ <table> 태그 구성
+        1. <tr> : 테이블의 열(세로)을 구분
+        2. <th> : 각 열의 제목, 모든 내용은 자동으로 굵은 글씨에 가운데 정렬 디폴트
+        3. <td> : 테이블의 열을 각각의 셀(cell)로 나누어줌.
+    -->
+
+    <!-- colspan : 같은 <tr>태그 내에서 병합 -->
+    <!-- rowspan : 다른 <tr>태그 내에서 병합 -->
+
+    <table>
+        <tr>
+            <th>고래</th>
+            <th>상어</th>
+        </tr>
+        <tr>
+            <td>늑대</td>
+            <td>강아지</td>
+        </tr>
+        <tr>
+            <td>기린</td>
+            <td>사슴</td>
+        </tr>
+        <tr>
+            <td>dd</td>
+        </tr>
+    </table>
+
+    <hr> 
+
+    <!-- 2. 테이블 열 합치기 : colspan 속성 이용 -->
+    <table>
+        <tr>
+            <td colspan="2">멍멍</td>
+            <td>냐용</td>
+            <td>냐용2</td>
+        </tr>
+        <tr>
+            <td colspan="2">음매</td>
+            <td>꽤꽦</td>
+            <td>꼬꼬</td>
+        </tr>
+        <tr>
+            <td colspan="2">음매</td>
+            <td>꽤꽦</td>
+            <td>꼬꼬</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table>
+        <tr>
+            <th>동물</th>
+            <td>사자</td>
+            <th>사람</th>
+            <td>비</td>
+        </tr>
+        <tr>
+            <th>과일</th>
+            <td colspan="3">사과</td>
+        </tr>
+        <tr>
+            <th rowspan="2">음료</th>
+            <td>콜라</td>
+            <th rowspan="2">옷</th>
+            <td>치마</td>
+        </tr>
+        <tr>
+            <td>사이다</td>
+            <td>바지</td>
+        </tr>
+    </table>
+
+    <hr>
+    <table>
+        <th>일</th>
+        <th>이</th>
+        <th>삼</th>
+        <th>사</th>
+        <th>오</th>
+
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td rowspan="2">4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>22</td>
+            <td>33</td>
+            <td>55</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td colspan="4">222</td>
+        </tr>
+        <tr>
+            <td>1111</td>
+            <td colspan="3">2222</td>
+
+
+            <td>5555</td>
+        </tr>
+        <tr>
+            <td>11111</td>
+            <td>22222</td>
+            <td colspan="2">33333</td>
+            <td>55555</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table>
+        <th>순번</th>
+        <th>제목</th>
+        <th>내용</th>
+        <th>날짜</th>
+        <th>조회수</th>
+
+        <tr>
+            <th>1</th>
+            <td>너의이름은</td>
+            <td rowspan="5">..</td>
+            <td rowspan="4">20240322</td>
+            <td>1</td>
+
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>회전목마</td>
+
+            <td>3</td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td>토토로</td>
+
+
+            <td>10</td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td>하울</td>
+
+
+            <td>11</td>
+        </tr>
+        <tr>
+            <th>5</th>
+            <td>라퓨타</td>
+
+            <td>20240323</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table>
+        <caption>영화정보</caption>
+        <tr>
+            <th>제목</th>
+            <td>하울의 움직이는 성</td>
+        </tr>
+        <tr>
+            <th>개봉일</th>
+            <td>2010.10.10</td>
+        </tr>
+        <tr>
+            <th>줄거리</th>
+            <td>.................................</td>
+        </tr>
+        <tr>
+            <th>상영정보</th>
+            <td>200분</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- 3. 테이블의 캡션(caption) : <caption>태그 사용시 테이블 상단에 제목이나 짧은 설명을 붙일 수 있음 : 테이블 안에 작성하면 자동 중앙정렬되는듯?? -->
+    <table>
+        <caption>해양생물</caption>
+        <tr>
+            <td>참치</td>
+            <td>연어</td>
+            <td>날치</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

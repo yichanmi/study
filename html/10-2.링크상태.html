@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크의 상태(state)</title>
+</head>
+<style>
+    a:link {
+        color: teal;
+        text-decoration: none;
+    }
+    a:visited {
+        color: maroon;
+        text-decoration: none;
+    }
+    a:hover {
+        color: blue;
+        text-decoration: line-through;
+    }
+    a:active {
+        color: red;
+        text-decoration: none; /*링크에 있는 밑줄을 없애주는 속성*/
+    }
+</style>
+<body>
+    <!-- 2. 링크의 상태(state) -->
+    <!--
+        (1) link : 한번도 방문한 적이 없는 상태(기본 설정)
+        (2) visited : 한 번이라도 방문한 적이 있는 상태
+        (3) hover : 링크 위에 마우스를 올려놓은 상태
+        (4) active : 링크를 마우스로 누르고 있는 상태(클릭x)
+
+        - 기본적으로 링크가 걸린 텍스트는 밑줄에, 텍스트 색상이 "파란색"으로 변경
+        - visited 상태의 링크는 밑줄에, 텍스트 색상이 "보라색"으로 변경
+        - active 상태의 링크는 밑줄에, 텍스트 색상이 "빨간색"으로 변경
+    -->
+    <h1>링크의 상태</h1>
+    <h2><a href="https://www.naver.com">링크의 상태에 따라 스타일을 다르게 설정합니다.</a></h2>
+</body>
+</html>
