@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레이아웃(Layout)</title>
+</head>
+<style>
+    #header {
+        background-color: lightgray;
+        height: 100px;
+    }
+    #nav {
+        background-color: aquamarine;
+        color: brown;
+        height: 300px;
+        float: left;
+    }
+    #section {
+        width: 200px;
+        text-align: left;
+        float: left;
+        padding: 10px;
+    }
+    #footer {
+        background-color: yellow;
+        height: 100px;
+        clear: both;
+    }
+    #header, #nav, #section, #footer { text-align: center; }
+    #header, #footer { line-height: 100px; }
+    #nav, #section { line-height: 240px; }
+</style>
+<body>
+    <!-- 레이아웃 : 특정 공간에 여러 구성 요소를 보기 좋게 효과적으로 배치하는 작업 : 외관을 결정짓는 요소 -->
+
+    <!-- 1. div 요소를 이용한 레이아웃 -->
+    <div id="header">
+        <h2>Header</h2>
+    </div>
+    <div id="nav">
+        <h2>Nav</h2>
+    </div>
+    <div id="section">
+        <h2>Section</h2>
+    </div>
+    <div id="footer">
+        <h2>Footer</h2>
+    </div>
+
+    <!-- 2. HTML5 레이아웃 : 의미(semantic) 요소 -->
+</body>
+</html>
