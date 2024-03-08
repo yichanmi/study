@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 적용하는 방법</title>
+    <style>
+        h2.inter {
+            color: blueviolet;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        ** 스타일 적용의 우선 순위 **
+        아래의 스타일 적용 방법들이 혼합되어 사용될 경우, 최종적으로 적용돠는 스타일은 아래 순서에 따라 결정
+        1순위. 인라인스타일
+        2순위. 내부 / 외부 스타일 시트 (html문서의 head요소 내부에 위치함)
+        3순위. 웹 브라우저 기본 스타일
+
+        예를 들어 인라인 스타일이 적용된 태그는 내부나 외부 스타일 시트와는 상관없이 무조건 인라인 스타일이 적용
+        내부 스타일 시트와 외부 스타일 시트는 가장 마지막에 적용된 스타일 시트가 적용.
+    -->
+
+    <!-- 1. 인라인 스타일 : 해당 요소에만 스타일 적용가능 -->
+    <h1 style="color: goldenrod;text-decoration: underline;">인라인 스타일 (Inline style)</h1>
+    
+    <br>
+
+    <!-- 2. 내부 스타일 시트 (Internal style sheet) : 해당 html문서 내의 <head>태그를 사용하여 css스타일 적용 -->
+    <h2 class="inter">내부 스타일 시트로 css적용 시켰어요!</h2>
+
+    <!-- 3. 외부 스타일 시트(External style sheet) : 외부 스타일 시트를 이용하는 방법은 웹 사이트 전체의 스타일을 하나의 파일에서 변경 -->
+    <!-- <head>태그 내에 선언 : <link rel="stylesheet" href="/examples/media/expand_style.css"> -->
+</body>
+</html>
