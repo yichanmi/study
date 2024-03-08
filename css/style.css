@@ -1,3 +1,4 @@
+/* 2.css적용 */
 .one {
     background-color: rgb(0, 0, 255);
 }
@@ -12,4 +13,27 @@
 }
 .five {
     background-color: rgb(255, 128, 100);
+}
+
+/* 3.css배경  */
+#three_ex_body {
+    background-color: lightblue;
+    color: blanchedalmond;
+}
+.three_ex_h1 {
+    background-color: blue;
+}
+.three_ex_p {
+    background-color: cornflowerblue;
+}
+
+/* 4.css배경이미지  */
+#four_ex_body {
+    /* background-image: url("https://tcpschool.com/examples/images/img_man.png");
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    background-attachment: fixed; *//*스크롤시 위치 고정*/
+
+    /*위의 내용을 한번에 명시하여 위 결과와 동일한 처리하기*/
+    background: #FFCCCC url("https://tcpschool.com/examples/images/img_man.png") repeat-x left bottom fixed;
 }
