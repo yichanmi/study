@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멀티미디어</title>
+</head>
+<body>
+    <!-- 1. 비디오 요소 : 여러개의 <source>태그 중 위쪽에서부터 순서대로 가장 먼저 인식되는 파일의 타입과 주소를 사용 -->
+    <video style="width: 576px;height: 360px;" controls autoplay loop>
+        <source src="https://tcpschool.com/lectures/sample_video_mp4.mp4" type="video/mp4">
+        <source src="https://tcpschool.com/lectures/sample_video_ogg.ogg" type="video/ogg">
+        <!-- 아래 track태그는 비디오가 재생될 때 보일 자막이나 캡션 파일을 명시 : 비디오 플레이어에 대한 텍스트 자막을 명시. -->
+        <track kind="subtitles" src="sample_subtitle_en_vtt" srclang="en" label="English">
+    </video>
+
+    <br>
+    
+    <!-- 2. 오디오 요소 -->
+    <audio controls autoplay>
+        <source src="https://tcpschool.com/lectures/sample_audio_ogg.ogg" type="audio/ogg">
+        <source src="https://tcpschool.com/lectures/sample_audio_mp3.mp3" type="audio/mp3">
+    </audio>
+</body>
+</html>

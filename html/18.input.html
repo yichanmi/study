@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input 요소</title>
+</head>
+<body>
+    <!-- 새롭게 추가된 부분 확인 -->
+    <!-- input list속성값과 datalist id속성값이 일치해야함  -->
+    <h2>datalist</h2>
+    <form action="">
+        <input list="lists" name="test">
+        <datalist id="lists">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="JS">
+            <option value="VUE">
+        </datalist>
+
+        <input type="submit" value="전송">
+
+        <br><br><hr><br><br>
+
+        <!-- HTML5에서 새롭게 추가된 INPUT 요소 -->
+        <!-- 1. 숫자입력 min & max -->
+        <span>1. input type이 number</span>
+        <!-- 최소 2부터 최대값은 10까지 입력가능합니다. -->
+        <input type="number" name="number" id="" min="2" max="10" step="3"><br>
+
+        <!-- 2. pattern : input요소의 값을 검사할때 정규 표현식 -->
+        <!-- autocomplete="on || off" : 사용자가 입력하는 정보를 자동으로 저장 -->
+        <span>2. pattern</span>
+        <input type="text" name="pattern" pattern="[0-9]{6}" autocomplete="on" title="'yymmdd'와 같은 6자리 숫자"><br>
+
+        <!-- https://www.tcpschool.com/html/html5_element_inputattr : 정규식패턴 설명 -->
+        <span>3. email 패턴</span>
+        <input type="email" name="emial" id="" pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*" title="이메일 양식">
+        <input type="search" name="" id=""><br>
+
+        <hr>
+
+        <!-- 3. fieldset태그 : <form>요소에서 연관된 요소들을 하나의 그룹으로 묶을 때 사용.
+                               이 요소는 하나의 그룹으로 묶은 요소들 주변으로 박스모양의 선을 그려줌.
+                               <legend>요소를 사용하면 <fieldset>요소의 캡션을 정의할 수 있음.                    
+        -->
+        <fieldset>
+            <legend>학사 관리 로그인</legend>
+            이름 : <input type="text" name="name" id=""><br>
+            학과 : <input type="text" name="st_id" id="">
+        </fieldset>
+    </form>
+</body>
+</html>
