@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css리스트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 1. css에서 사용할 수 있는 list 스타일 속성 -->
+    <!-- 1-1. list-style-type --> 
+    <h1>1. list-style-type 속성을 이용한 마커의 변경</h1>
+
+    <ul class="circle">
+        <li>사과</li>
+        <li>멜론</li>
+        <li>바나나</li>
+    </ul>
+
+    <ul class="square">
+        <li>수박</li>
+        <li>참외</li>
+        <li>옥수수</li>
+    </ul>
+
+    <ol class="upperAlpha">
+        <li>감자</li>
+        <li>상추</li>
+        <li>고구마</li>
+    </ol>
+
+    <ol class="lowerRoman">
+        <li>오이</li>
+        <li>배추</li>
+        <li>시금치</li>
+    </ol>
+
+    <hr>
+
+    <!-- 2. list-stlye-image 속성을 사용하여 자신만의 이미지로 마커로 사용  -->
+    <ol class="imgMarker">
+        <li>오이</li>
+        <li>배추</li>
+        <li>시금치</li>
+    </ol>
+
+    <hr>
+
+    <!-- 3. list-style-position : 리스트의 요소를 위치를 설정 , 기본 속성값은 outside -->
+    <!-- 
+        inside : 문단 안쪽으로 들여쓰기 효과
+        output : 문단 바깥쪽
+    -->
+    <h1>2. list-style-position 속성을 이용한 리스트 요소의 위치 설정</h1>
+    <p>이 리스트는 위치를 기본 설정타입인 <b>outside</b>로 지정했습니다. </p>
+    <ul class="outside">
+        <li>사과</li>
+        <li>딸기</li>
+        <li>포도</li>
+    </ul>
+
+    <p>이 리스트는 위치를 <b>inside</b>로 지정했습니다.</p>
+    <ul class="inside">
+        <li>수박</li>
+        <li>참외</li>
+        <li>옥수수</li>
+    </ul>
+
+    <hr>
+
+    <ul class="outside">
+        <li><b>outside</b>예제2입니다.</li>
+        <li>outside는 목록의 머리 기호가 내어쓰기 되어서 밖으로 나간 형태로 보입니다. outside는 목록의 머리 기호가 내어쓰기 되어서 밖으로 나간 형태로 보입니다. <br> outside는 목록의 머리 기호가 내어쓰기 되어서 밖으로 나간 형태로 보입니다.</li>
+    </ul>
+
+    <ul class="inside">
+        <li><b>inside</b>예제2입니다.</li>
+        <li>목록의 머리 기호가 들여쓰기 되어서 안으로 들어온 형태로 보여집니다.목록의 머리 기호가 들여쓰기 되어서 안으로 들어온 형태로 보여집니다.<br>목록의 머리 기호가 들여쓰기 되어서 안으로 들어온 형태로 보여집니다.</li>
+    </ul>
+
+    <hr>
+
+    <!-- 3. list-style 속성 한번에 적용하기 -->
+    <ul class="shorthand">
+        <li>사과</li>
+        <li>멜론</li>
+        <li>바나나</li>
+    </ul>
+
+    <hr>
+
+    <!-- 4. 리스트에 배경색 적용 : 리스트 전체뿐만 아니라 리스트 요소별로도 각각의 배경색을 설정가능 -->
+    <h1>3. 리스트 요소별 배경색 설정</h1>
+     <ul class="ul-color">
+        <li>가</li>
+        <li>나</li>
+        <li>다</li>
+     </ul>
+     
+     <ol class="ol-color">
+        <li>갤럭시</li>
+        <li>아이폰</li>
+        <li>에어팟</li>
+     </ol>
+</body>
+</html>

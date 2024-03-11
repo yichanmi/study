@@ -37,3 +37,287 @@
     /*위의 내용을 한번에 명시하여 위 결과와 동일한 처리하기*/
     background: #FFCCCC url("https://tcpschool.com/examples/images/img_man.png") repeat-x left bottom fixed;
 }
+
+/* 5. css텍스트*/
+.rightToLeft {
+    direction: rtl;
+    color: blue;
+}
+.leftToRight {
+    color: brown;
+}
+.direction{
+    direction: ltr; /*기본 방향*/
+}
+
+
+.word-spacing-minus {
+    color: black;
+    word-spacing: -2px;
+}
+.word-spacing-plus {
+    color: black;
+    word-spacing: 100px;
+}
+
+.text-indent {
+    text-indent: 30px;
+}
+.left-order {
+    text-align: left;
+}
+.right-order {
+    text-align: right;
+}
+.center-order {
+    text-align: center;
+}
+.topline {
+    text-decoration: overline;
+}
+.centerline {
+    text-decoration: line-through;
+}
+.bottomline {
+    text-decoration: underline;
+}
+.alinkline {
+    text-decoration: none;;
+}
+
+.downlineheight {
+    line-height: 0.8;
+}
+.uplineheight {
+    line-height: 1.8;
+}
+
+.textshadow {
+    text-shadow: 2px 2px lightcoral;
+}
+
+/*6.css글꼴*/
+.serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.normal {
+    font-style: normal;
+}
+.italic {
+    font-style: italic;
+}
+.oblique {
+    font-style: oblique;
+}
+
+.variant_normal {
+    font-variant: normal;
+}
+.smallCaps {
+    font-variant: small-caps;
+}
+
+.bold_normal {
+    font-weight: normal;
+}
+.bold_600 {
+    font-weight: 600;
+}
+.bold_bolder {
+    font-weight: bolder;
+}
+.bold_lighter {
+    font-weight: lighter;
+}
+
+.large {
+    font-size: 2.5em;
+}
+.small {
+    font-size: 0.7em;
+}
+.fixed {
+    font-size: 20px;
+}
+
+/*7. 링크 스타일*/
+.linkstyle {
+    background-color: #FFCCCC;
+    color: darkslategray;
+    font-size: 1.3em;
+    text-decoration: none;
+}
+.linkstyle:link {
+    color: olive;
+}
+.linkstyle:visited {
+    color: brown;
+}
+.linkstyle:hover {
+    color: coral;
+}
+.linkstyle:active {
+    color: khaki;
+}
+
+.linkstyle2:link {
+    background-color: #FFA500;
+    color: maroon;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.linkstyle2:hover, .linkstyle2:active {
+    background-color: #FF4500;
+}
+
+/*8. 리스트 스타일*/
+.circle {
+    /* list-style-type: disc; 기본:꽉찬 원 */
+    /* list-style-type: decimal-leading-zero; 01 02 03..... */
+    list-style-type: none;
+}
+.square {
+    list-style-type: square;
+}
+.upperAlpha {
+    list-style-type: upper-alpha;
+}
+.lowerRoman {
+    list-style-type: lower-roman;
+}
+
+.imgMarker {
+    list-style-image: url("https://tcpschool.com/examples/images/img_list_marker.png");
+}
+
+.outside {
+    list-style-position: outside;
+}
+.inside {
+    list-style-position: inside;
+}
+
+.shorthand {
+    list-style: square inside url("https://tcpschool.com/examples/images/img_list_marker.png");
+}
+
+.ul-color {
+    background: #D2691E;
+    padding: 15px;
+}
+.ol-color {
+    background: #6495ED;
+    padding: 15px;
+}
+.ul-color li {
+    background: #DEB887;
+    margin: 5px;
+}
+.ol-color li {
+    background: #00FFFF;
+    margin-left: 15px;
+}
+
+/*9.css테이블*/
+.text-color {
+    color: red;
+}
+.table {
+    border-collapse: collapse; /*테이블 테두리 한줄*/
+}
+.table, .table th, .table td {
+    border: 2px solid orange;
+}
+.table-magin {
+    width: 100%;
+    /* border-collapse: collapse; 테이블의 테두리를 하나로 합쳐 표시합니다 */
+    border-collapse: separate; /*테이블의 테두리와 td의 테두리 간격을 없앱니다. 겹치는 부분은 한줄*/
+    /*border-collapse속성값이 separate일때, 간격의 크기는 border-spacing 속성으로 정한다.*/
+    border-spacing: 20px 30px; /*값이 하나면 수평,수직거리를 한번에 지정된것, 2개라면 첫번째 값은 수평, 두번쨰값은 수직*/
+}
+.table-magin, .table-magin th, .table-magin td {
+    border: 1px solid;
+}
+
+.table2 {
+    border-collapse: collapse;
+    width: 100%;
+}
+.table2, .table2 th, .table2 td {
+    border: 1px solid black;
+}
+.table2 th {
+    text-align: left;
+}
+.table2 td {
+    text-align: center;
+}
+
+.table3 {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table3, .table3 th, .table3 td {
+    border: 1px solid black;
+}
+.table3 th {
+    vertical-align: top;
+    height: 50px;
+}
+.table3 td {
+    vertical-align: bottom;
+    height: 50px;
+}
+
+.table4 {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table4, .table4 th, .table4 td {
+    border-bottom: 1px solid maroon;
+    padding: 10px;
+}
+
+.table5 {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table5, .table5 th, .table5 td {
+    padding: 10px;
+    border-bottom: 1px solid maroon;
+}
+.table5 tr:hover {
+    background-color: #F5F5F5;
+}
+
+.table6 {
+    border-collapse: collapse;
+    width: 100%;
+}
+.table6 th, .table6 td {
+    padding: 10px;
+}
+.table6 tr:nth-child(odd) {
+    background-color: #F3F3F3;
+}
+
+.table_ex {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+.table_ex, .table_ex th, .table_ex td {
+    padding: 10px;
+}
+.table_ex tr:nth-child(odd) {
+    background-color: #F3F3F3;
+}
+.table_ex tr:hover {
+    background-color: lightgray;
+}

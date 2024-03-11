@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css글꼴</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 1. font-family(글꼴 집합) 속성 : 하나의 글꼴만 설정할수도, 여러개의 글꼴을 같이 설정할 수도 있음. -->
+    <!-- font-family 속성값이 여러개의 글꼴로 설정되어 있으면, 웹 브라우저는 위에서부터 순서대로 글꼴을 읽어들임. 
+         즉 계속해서 읽어들인 글꼴이 존재하는지 확인하여, 읽어들인 글꼴이 사용자 컴퓨터에 존재하면 해당 글꼴로 표시
+     -->
+     <h1>1. font-family 속성을 이용한 글꼴 설정</h1>
+    <p class="serif">Times New Roman 글꼴을 적용합니다.</p>
+    <p class="sansserif">Arial 글꼴을 적용합니다.</p>
+
+    <br>
+    <hr>
+
+    <!-- 2. font-style : 주로 이탤릭체를 사용하기 위해 사용 -->
+    <h1 class="normal">2. font-style 속성을 이용한 글꼴의 스타일 설정</h1>
+
+    <!-- 2-1 normal : 텍스트에 어떠한 스타일도 적용x -->
+    <p class="normal">이 문단은 normal 스타일이 적용되었습니다.</p>
+
+     <!-- 2-2 italic : 텍스트를 이탤릭체로 변경 -->
+    <p class="italic">이 문단은 italic 스타일이 적용되었습니다.</p>
+
+     <!-- 2-3 oblique : 텍스트를 기울입니다. italic과 매우 유사하지만 지원하는 웹브라우저가 거의 없다. -->
+    <p class="oblique">이 문단은 oblineque스타일이 적용되었습니다</p>
+    
+    <br>
+    <hr>
+
+    <!-- 3. font-variant 속성 : 속성값이 small-caps로 설정되면, 텍스트에 포함된 영문자 중 모든 소문자를 작은 대문자 글꼴로 변경 -->
+    <h1>3. font-variant속성을 이용한 폰트의 variant 설정</h1>
+
+    <p class="variant_normal">이 문단은 normal 스타일이 적용되어 있습니다.</p>
+    <p class="smallCaps">이 문단은 Small-Caps 글꼴이 적용되어 있습니다.</p>
+    <p class="smallCaps">이 속성은 한글에는 적용이 되질 않습니다!!!</p>
+
+    <br>
+    <hr>
+
+    <!-- 4. font-weight 속성 : 텍스트를 얼마나 두껍게 표현할지를 설정. 사용할수 있는 속성값에는 lighter, normal, bold, bolder 등.... 100,200,...,900 같이 숫자로 텍스트 두꼐를 설정 가능 -->
+    <h1>4. font-weight 속성을 이용한 글꼴의 두께 설정</h1>
+
+    <p class="bold_normal">이 텍스트의 두께는 normal 스타일 적용</p>
+    <p class="bold_600">이 텍스트의 두께는 600이 적용!!</p>
+    <p class="bold_bolder">이 텍스트의 두께는 bolder 스타일이 적용!!</p>
+    <p class="bold_lighter">이 텍스트의 두께는 lighte 스타일이 적용!!</p>
+
+    <br>
+    <hr>
+
+    <!-- 5. font-size : 텍스트 크기 설정
+          5-1-1. 절대적 크기 : 텍스트의 크기를 명시된 크기 그대로 설정하고자 할때 사용 -> 절대적 크기로 설정된 텍스트는 모든 웹 브라우저에서 같은 크기로 표현
+          5-1-2. 상대적 크기 : 텍스트를 둘러싸고 있는 HTML요소 들의 크기에 따라 텍스트의 크기도 같이 변하는 방식. 또한 사용자가 웹 브루아저를 통해 텍스트 크기를 직접 변경가능.
+          =/
+    -->
+    <!-- 5-1. font-size  크기 단위 
+        - "백분율 단위(%)"는 기본 크기를 100%로 놓고 그에 대한 상대적인 크기를 설정 : 박스의 길이를 화면 크기에 맞추어야 할떄 사용
+        - "배수 단위(em)" : 해당 글꼴을 기본 크기를 1em으로 놓고 긍그에대한 상대적인 크기를 설정
+        - 픽셀(px) 단위 : 스크린의 픽셀 기준으로 하는 절대적인 크기를 설정
+    -->
+    <h1>5. font-size 속성을 이용한 글꼴</h1>
+
+    <p class="large">글꼴의 크기를 2.5em크기로 변경</p> <!-- html폰트 크기 속성값이 16px이면 1em == 16px -->
+    <p>글꼴의 기본 크기인 1em입니다.</p>
+    <p class="small">글꼴의 크기를 0.7em으로 변경</p>
+    <p class="fixed">글꼴의 크기를 20px으로 변경.</p>
+</body>
+</html>
