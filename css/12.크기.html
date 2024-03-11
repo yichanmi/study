@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>크기(Dimension)</title>
+    <style>
+        .wrap {
+            height: 200px;
+            width: 500px;
+            border: 2px solid lightsalmon;
+        }
+        .width {
+            width: 500px;
+            border: 2px solid #DAA520;
+        }
+        .max-width {
+            max-width: 500px;
+            border: 2px solid #CD5C5C;
+        }
+        .maxheight {
+            max-height: 30px;
+            background-color: greenyellow;
+            overflow: auto;
+            white-space: nowrap; /*가로스크롤바*/
+        }
+        .min-width {
+            min-width: 500px;
+            border: 2px solid #CD5C5C;
+        }
+        .min-height {
+            min-height: 100px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. height와 width속성 : 높이와 넓이, 이 속성의 기본 설정값은 auto이며 웹 브라우저가 각각 html요소에 맞게 자동으로 높이와 넓이를 설정 -->
+    
+    <h1>1. height와 width 속성</h1>
+    <div class="wrap">이 div요소의 높이는 200px이고 너비는 500px입니다.</div>
+
+    <br><hr><br>
+
+    <!-- 2. max-width 속성 : 해당 html요소가 가질  수 있는 최대 너비를 설정 -->
+    <!-- 기본 설정값 : none => 해당 요소의 너비에 제한을 두지 않겠다는 의미 -->
+    <!-- width 속성으로 너비를 설정하면, 설정된 너비 이하로 브라우저의 크기가 줄어들 때 해당 요소에 스크롤바를 생성 -->
+    <h1>2. max-width</h1>
+    <div class="width">이 div요소는 width 속성을 500px로 설정</div>
+    <div class="max-width">이 div요소는 max-width 속성을 500px로 설정</div>
+    <p>웹 브라우저의 크기를 줄여서 두 div 요소의 차이를 알아보세요!</p>
+
+    <br><hr><br>
+
+    <!-- 3. min-width 속성 : 해당 html요소가 가질 수 있는 최소 너비를 설정, 기본값 0 => html요소의 너비에 제한을 두지 않겠다는 의미 
+        min-width 속성이 설정된 요소에 width속성값을 따로 설정하지 않으면 초기 너비는 100%을 가지게 됨.
+    -->
+    <h1>3. min-width 속성</h1>
+    <div class="width">이 div요소는 width 속성을 500px로 설정</div>
+    <div class="min-width">이 div요소는 min-width 속성을 500px로 설정</div>
+
+    <br><hr><br>
+
+    <!-- 4. max-height 속성 : html요소가 가질 수 있는 최대 높이를 설정, 기본값은 none, 해당 html요소의 크기에 따라 높이가 자동으로 설정 -->
+    <!-- 만약 헤당 요소의 높이가 설정된 최대 높이보다 클 경우, 수직 스크롤바를 생성 -->
+    <h1>max-height속성</h1>
+    <p class="maxheight">이 div요소는 max-height속성을 50px로 설정했습니다.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ligula non ligula iaculis semper at vitae ante. Sed condimentum viverra sollicitudin. Phasellus sodales ipsum nec nulla luctus, in luctus ipsum vestibulum. Pellentesque vehicula lectus a ex tincidunt, eget pellentesque nisl posuere. Vestibulum sed purus sapien. Aenean consequat urna sit amet quam pulvinar, in interdum augue volutpat. Donec ex leo, feugiat vel lorem non, blandit venenatis elit. Vestibulum eu erat eget ante consequat iaculis.
+    </p>
+
+    <br><hr><br>
+
+    <!-- 5. min-height 속성 : html요소가 가질 수 있는 최소 높이. 해당 html요소의 높이를 설정된 높이 이하로 제한. 즉 height속성값이 min-height속성값 이하로 낮아지지 않도록. -->
+    <h1>min-height속성</h1>
+    <p class="min-height">이 div요소는 min-height속성을 100px 설정했습니다.</p>
+</body>
+</html>
