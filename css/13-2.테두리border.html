@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테두리(border)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    p {
+        border-style: solid;
+        border-width: 3px;
+    }
+</style>
+<body>
+    <!-- ※ 테두리(border) : 내용(content)과 패딩(padding) 영역을 둘러싸는 테두리 스타일을 설정 -->
+    <!-- 
+        border-style 속성 정리
+        - dotted : 점선
+        - dashed : 약간 긴 점선
+        - solid : 실선
+        - double : 이중 실선
+        - groove : 3차원인 입체적인 선, border-color 속성값에 영향을 받음
+        - ridge : 테두리를 3차원인 능선효과가 있는 선을 설정하며, border-color 속성값에 영향을 받음
+        - inset : 3차원인 내지로 끼운 선으로 설정, border-color 속성값에 영향을 받음
+        - outset : 3차원인 외지로 끼운선. border-color 속성값에 영향을 받음
+        - none : 테두리를 없앰
+        - hidden : 테두리가 존재하기는 하지만 표현되진 않음.
+    -->
+    <h1>1. border-style 속성을 이용한 테두리의 모양 변경</h1>
+    <p class="dotted">border-style 속성값을 dotted로 한 단락</p>
+    <p class="dashed">border-style 속성값을 dashed 한 단락</p>
+    <p class="solid">border-style 속성값을 solid 한 단락</p>
+    <p class="double">border-style 속성값을 double 한 단락</p>
+    <p class="groove">border-style 속성값을 groove 한 단락</p>
+    <p class="ridge">border-style 속성값을 ridge 한 단락</p>
+    <p class="inset">border-style 속성값을 inset 한 단락</p>
+    <p class="outset">border-style 속성값을 outset 한 단락</p>
+    <p class="hidden">border-style 속성값을 hidden 한 단락 : 보이지만 않을뿐 선이 존재해요!!</p>
+    <p class="none">border-style 속성값을 none 한 단락</p>
+    <p class="mix">border-style 속성 mix한 단락 : 네 방향으로 각각 선의 스타일이 달라졌어요!</p>
+
+    <br><hr><br>
+
+    <!-- 2. border-width 속성을 이용한 테두리의 두께 설정 -->
+    <h1>2. border-width 속성을 이용한 테두리 두께 설정</h1>
+    <p class="dottedA">border-width 속성값을 2px로 한 단락</p>
+    <p class="dottedB">border-width 속성값을 5px로 한 단락</p>
+    <p class="dashedA">border-width 속성값을 thin으로 한 단락</p>
+    <p class="dashedB">border-width 속성값을 thick로 한 단락</p>
+    <p class="doubleA">border-width 속성값을 5px로 한 단락</p>
+    <p class="doubleB">border-width 속성값을 thick로 한 단락</p>
+    <p class="mix2">border마다 각각의 border-width 속성값을 적용한 단락</p>
+
+    <br><hr><br>
+
+    <!-- 3. border-방향-style 로 각 테두리별 스타일 설정 -->
+    <h1>3. 테두리의 각 부분에 대한 별도의 스타일 설정</h1>
+    <p class="mix_four">border-style속성값 4개로 설정한 단락입니다</p>
+    <p class="mix_two">border-style속성값 2개로 설정한 단락입니다</p>
+    <p>margin 속성값을 4개로 한 것과 2개로 한 것이 같은 효과를 내는 것에 주목!!</p>
+
+    <br><hr><br>
+
+    <!-- 4. border-color 속성 : color속성값뿐만 아니라 투명한 선을 나타내는 transparent 속성값을 사용할 수 있음, 이 속성값이 정해지지 않으면 해당 요소의 color 속성값을 그대로 물려받음 -->
+    <h1>4. border-color 속성을 이용한 테두리의 색상 변경</h1>
+    <p class="borderRed">border-color 속성값을 red로 변경</p>
+    <p class="borderGreen">border-color 속성값을 green으로 변경</p>
+    <p class="borderBlue">border-color 속성값을 blue로 변경</p>
+    <p class="borderMix">테두리마다 각각의 border-color속성값을 적용한 단락</p>
+    <p class="noneBorder">border-color 속성의 속성값을 명시하지 않은 단락 : border-color속성값이 설정되지 않아 color속성값을 물려받습니다!!</p>
+
+    <br><hr><br>
+
+    <!-- 5. 테두리 스타일 변경 -->
+    <h1>5. 테두리 스타일 변경</h1>
+    <p class="change">border-style 속성을 설정한 단락</p>
+    <p class="notChg">border-style 속성을 설정하지 않은 단락</p>
+    <p>테두라 축약 표현시에는 반드시 border-style 속성이 먼저 설정되어 있어야 제대로 표현됩니다!</p>
+</body>
+</html>

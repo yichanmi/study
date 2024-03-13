@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display : flex로 레이아웃 만들어보기</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+        }
+        .header {
+            border: 1px solid red;
+            width: 100%;
+            height: 100px;
+        }
+        .flex_container {
+            display: flex;
+            height: 100%;
+            border: 1px solid darkmagenta;
+            flex-wrap: wrap;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+            background-color: yellow;
+            border: 1px solid black;
+            flex-wrap: wrap; /*flex 아이템들이 flex container의 크기를 벗어났을때 줄을 바꿔서 배치 하도록 함.*/
+        }
+        .box {
+            height: 100px;
+            border: 1px solid slateblue;
+        }
+        .footer {
+            height: 100px;
+            border: 1px solid aqua;
+        }
+
+        .container {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        ★ flex 필수 지정 속성
+        1. 부모요소에 추가
+         - display : flex;
+         - flex-direction : row; (column || row-reverse || column-reverse)
+            - 내부 요소들의 정렬방향
+            - row는 가로방향 정렬
+            - column은 세로방향 정렬
+            - reverse는 각 방향의 반대에서부터 정렬.
+         - flex-wrap : wrap ; 줄바꿈:자식요소들의 수가 많아져서 개수가 꽉찼을때
+         - justify-content : 축 수평방향 정렬
+         - align-items : 축 수직 방향 정렬
+
+        2. 자식요소에 설정하는 css속성
+         - flex : <grow(팽창지수)> <shrick(수축 지수)> <basis(기본크기)>
+            .child { flex : 0 1 auto }
+    -->
+
+    <!-- flexbox는 Container와 item에 적용하는 속성이 구분되어 있음
+        Container에는 display, flex-flow, justify-content 등의 속성을 사용 가능,
+        item에는 order, flex, align-self 등으 속성 사용 가능
+    -->
+    <h1>1. flexbox : 웹페이지의 레이아웃을 쉽게 하기 위한 속성</h1>
+    <div class="header">헤더</div>
+
+    <div class="flex_container">
+        <div class="content">
+            <div class="box">세로박스하나</div>
+            <div class="box">세로박스둘</div>
+            <div class="box">세로박스셋</div>
+            <div class="box">세로박스넷</div>
+            <div class="box">세로박스다섯</div>
+            <div class="box">세로박스여섯</div>
+            <div class="box">세로박스일곱</div>
+            <div class="box">세로박스여덟</div>
+        </div>
+        <div class="content">
+            <div class="box">세로박스하나</div>
+            <div class="box">세로박스둘</div>
+            <div class="box">세로박스셋</div>
+            <div class="box">세로박스넷</div>
+            <div class="box">세로박스다섯</div>
+            <div class="box">세로박스여섯</div>
+            <div class="box">세로박스일곱</div>
+            <div class="box">세로박스여덟</div>
+        </div>
+    </div>
+
+    <div class="footer">푸터</div>
+
+    <div class="container">
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+    </div>
+</body>
+</html>

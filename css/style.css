@@ -321,3 +321,164 @@
 .table_ex tr:hover {
     background-color: lightgray;
 }
+
+/*13.박스 모델, 패딩, 테두리*/
+.dotted {
+    border-style: dotted;
+}
+.dashed {
+    border-style: dashed;
+}
+.solid {
+    border-style: solid;
+}
+.double {
+    border-style: double;
+}
+.groove {
+    border-style: groove;
+}
+.ridge {
+    border-style: ridge;
+}
+.inset {
+    border-style: inset;
+}
+.outset {
+    border-style: outset;
+}
+.hidden {
+    border-style: hidden;
+}
+.none {
+    border-style: none;
+}
+.mix {
+    border-style: solid dashed dotted double;
+}
+
+
+/*border-width*/
+.dottedA {
+    border-style: dotted;
+    border-width: 2px;
+}
+.dottedB {
+    border-style: dotted;
+    border-width: 5px;
+}
+.dashedA {
+    border-style: dashed;
+    border-width: thin;
+}
+.dashedB {
+    border-style: dashed;
+    border-width: thick;
+}
+.doubleA {
+    border-style: double;
+    border-width: 5px;
+}
+.doubleB {
+    border-style: double;
+    border-width: thick;
+}
+.mix2 {
+    border-style: solid;
+    border-width: 1px 2px 10px thick;
+}
+
+/*각 테두리*/
+.mix_four {
+    border-top-style: dotted;
+    border-right-style: double;
+    border-bottom-style: dotted;
+    border-left-style: double;
+}
+.mix_two {
+    border-style: dotted double;
+}
+
+.borderRed {
+    border-color: red;
+}
+.borderGreen {
+    border-color: rgb(0, 255, 0);
+}
+.borderBlue {
+    border-color: blue;
+}
+.borderMix {
+    border-color: red green violet cornflowerblue;
+}
+.noneBorder {
+    color: teal;
+}
+
+.change {
+    border-radius: 8px; /*모서리 둥근정도*/
+    border: 3px solid teal;
+}
+.notChg {
+    border: 5px teal;
+}
+
+/*14.margin*/
+.mar {
+    /* margin-top: -25px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    margin-left: 100px; */
+
+    margin: -25px 10px 30px 100px;
+}
+
+.parent {
+    height: 100px;
+    margin-left: 100px;
+}
+.child {
+    background-color: #FFF8DC;
+    margin-left: inherit;
+}
+
+.mar3 {
+    margin: 20px 50px 30px 50px;
+}
+.mar4 {
+    margin: 20px 50px 30px;
+}
+.mar2 {
+    margin: 20px 50px;
+}
+.mar1 {
+    margin: 20px;
+}
+
+/*16. 디스플레이*/
+.circle li {
+    display: inline;
+}
+
+.first {
+    background-color: aqua;
+}
+.second {
+    background-color: green;
+}
+.third {
+    background-color: yellow;
+}
+.inline {
+    display: inline;
+}
+.inline-block {
+    display: inline-block;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 7px;
+}

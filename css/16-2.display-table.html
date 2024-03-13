@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display-table</title>
+    <style>
+        .display-table {
+            width: 100%;
+            display: table; /*<table>요소처럼 동작*/
+        }
+        .display-table-header {
+            display: table-header-group; /*<thead>*/
+        }
+        .display-table-body {
+            display: table-row-group; /*<tbody>*/
+        }
+        .display-table-row {
+            display: table-row; /*<tr>*/
+        }
+        .display-table-cell {
+            display: table-cell; /*<td>, <th>*/
+        }
+
+        /*display : flex*/
+        .container {
+            display: flex;
+            flex-direction: row; /*row : x축으로 정렬할래요*/
+            flex-direction: row-reverse; /*x축 : 우에서 좌로 정렬. item반대*/
+            flex-direction: column-reverse; /*y축 : 아래서부터 위로 정렬 */
+            /*flex-direction: column; /*column : y축 취에서 아래*/
+            border: 3px dotted black;
+        }
+        .item {
+            background-color: greenyellow;
+            width: 150px;
+            border: 2px solid blue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>1. div태그로 테이블처럼 만들기</h1>
+    <div class="display-table">
+        <div class="display-table-header">
+            <div class="display-table-row">
+                <div class="display-table-cell">a</div>
+                <div class="display-table-cell">b</div>
+                <div class="display-table-cell">c</div>
+            </div>
+        </div>
+        <div class="display-table-body">
+            <div class="display-table-row">
+                <div class="display-table-cell">a1</div>
+                <div class="display-table-cell">b1</div>
+                <div class="display-table-cell">c1</div>
+            </div>
+
+            <div class="display-table-row">
+                <div class="display-table-cell">a2</div>
+                <div class="display-table-cell">b2</div>
+                <div class="display-table-cell">c2</div>
+            </div>
+
+            <div class="display-table-row">
+                <div class="display-table-cell">a3</div>
+                <div class="display-table-cell">b3</div>
+                <div class="display-table-cell">c3</div>
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <h1>1-1. table로 테이블 표 만들기</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>a1</th>
+                <th>b1</th>
+                <th>c1</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>a2</td>
+                <td>b2</td>
+                <td>b2</td>
+            </tr>
+            <tr>
+                <td>a3</td>
+                <td>b3</td>
+                <td>b3</td>
+            </tr>
+        </tbody>
+
+    <br><hr><br>
+
+    <h1>1-2. display - flex </h1>
+    <div class="container">
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+    </div>
+</body>
+</html>

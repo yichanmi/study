@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진 margin</title>
+    <style>
+        div {
+            background-color: #7FFFD4;
+            border: 2px solid teal;
+        }
+        div.marauto {
+            width: 350px;
+            margin: auto;
+        }
+        .parent02 {
+            width: 100px;
+            margin: 0 auto;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="margin14">
+    <!-- 1. 마진(margin) : 테두리와 이웃하는 요소 사이의 간격
+                        : margin영역은 패딩영역과 달리 background-color속성으로 설정하는 배경색의 영향을 받지 않음.
+    -->
+
+    <h1>1. 마진(margin) 영역 설정</h1>
+    <div>아무런 magin속성값도 설정하지 않은 요소</div><br>
+    <div class="mar">margin 속성값을 각 측면마다 별도로 지정한 요소</div>
+
+    <br><hr><br>
+
+    <h1>2. margin 속성값 조절</h1>
+    <div>아무런 margin 속성값도 설정하지 않은 요소입니다.</div><br>
+    <div class="parent">left-margin 속성값을 100px로 설정한 요소입니다.
+        <div class="child">left-margin속성값을 inherit(부모요소(.parent)의 속성값 상속) 설정한 요소</div>
+    </div>
+    
+    <br><hr><br>
+
+    <!-- 3. 마진 축약 표현 -->
+    <h1>3. 마진(margin) 영역 설정</h1>
+    <div>아무런 마진 속성값도 설정안한 요소입니다.</div>
+    <div class="mar4">margin속성값을 4개로 설정</div>
+    <div class="mar3">margin속성값을 3개로 설정</div>
+    <div class="mar2">margin속성값을 2개로 설정</div>
+    <div class="mar1">margin속성값을 1개로 설정</div>
+    <p>margin속성값을 4개로 한 것과 3개로 한 것이 동일한 효과를 내는 것에 주목!!!!</p>
+
+    <!-- 4. margin속성값에 auto 사용 이유 : 웹 브라우저가 수평 방향 마진(margin) 값을 자동으로 설정 그 결과 해당 요소는 그 요소를 포함하고 있는 부모(parent) 요소의 정중앙에 위치 -->
+    <h1 class="auto_h1">4. margin 속성값 auto를 이용한 수평 정렬</h1>
+    <div class="marauto">margin 속성값을 auto로 설정한 요소</div>
+
+    <br>
+
+    <div class="parent02">포함
+        <div class="parent01">포함2
+            <div class="child02">포함3</div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <!-- 5. 리스트에는 기본 마진과 패딩이 존재함. 이를 제거  -->
+    <h1>5. 리스트 마진 0, 패딩0을 넣어서 제거할거야</h1>
+    <ul style="list-style-type: none; margin: 0; padding: 0;">
+        <li>마진</li>
+        <li>패딩</li>
+        <li>테두리</li>
+    </ul>
+</body>
+</html>

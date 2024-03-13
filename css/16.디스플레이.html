@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디스플레이(display)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+       .header {
+            border: 1px solid red;
+            width: 100%;
+       }
+       .none {
+            display: none;
+       }
+       .hidden {
+            visibility: hidden;
+       }
+    </style>
+</head>
+<body>
+    <!-- 1. 디스플레이(display) : 웹 페이지의 레이아웃을 결정하는 css중요 속성
+                                 대부분의 html요소는 display 속성의 기본값으로 다음 두가지 값 중 하나를 가짐
+            1) 블록(block) : display값이 블록인 요소는 언제나 새로운 라인에서 시작하며 해당 라인의 모든 너비를 차지함
+            2) 인라인(inline) : 새로운 라인에서 시작하지 않음. 해당 html요소의 내용(content)만큼만 차지.
+
+            ※ HTML 모든 요소는 각각 기본 display 속성값을 가지고 있다.
+            하지만 display 속성값이 블록인 요소의 속성값을 인라인으로 바꿀 수 있다.
+            또한, 반대로 display 속성값이 인라인 요소의 속성값을 블록으로 바꿀 수 있다.
+    -->
+    <h1>1. display 속성의 가본 설정값 변경</h1>
+    <!-- display : 블록 -> 인라인으로 변경하여 해당 라인의 모든 너비를 차지하는 블록 요소의 특징을 잃어버림 -->
+    <ul class="circle">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">자바스크립트</a></li>
+    </ul>
+    
+    <br><hr><br>
+
+    <h1>2. 다양한 display 속성값</h1>
+    <p>아래에 나오는 div요소는 모두 display 속성값이 블록입니다.</p>
+    <div class="first">블록</div>
+    <div class="second">블록</div>
+    <div class="third">블록</div><br>
+
+    <hr>
+
+    <p>아래에 나오는 div요소는 모두 display 속성값이 인라인입니다.</p>
+    <div class="first inline">인라인</div>
+    <div class="second inline">인라인</div>
+    <div class="third inline">인라인</div><br><br>
+
+    <hr>
+
+    <p>아래에 나오는 div요소는 모두 display속성값이 인라인-블록입니다.</p>
+    <div class="first inline-block">인라인-블록</div>
+    <div class="second inline-block">인라인-블록</div>
+    <div class="third inline-block">인라인-블록</div>
+
+    <br><hr><br>
+
+    <h1>HTML 요소의 숨기기</h1>
+    <div style="border: 1px solid red;">
+        <p class="none">이 아래 단락은 display 속성값을 none 으로 설정</p>
+        <p>이 단락은 display 속성값을 none으로 설정</p>
+    </div><br>
+    <div style="border: 1px solid darkgoldenrod;">
+        <p>이 아래의 단락은 visibility 속성값을 hidden으로 설정했습니다.</p>
+        <p class="hidden">이 단락은 visibility 속성값을 hidden으로 설정했습니다.</p>
+    </div>
+    <p>visibility 속성값을 hidden으로 설정하면 눈에 보이지만 않을뿐 여전히 웹 페이지 내에 존재합니다.</p>
+
+    <br><hr><br>
+
+    
+</body>
+</html>

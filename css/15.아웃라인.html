@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아웃라인(outline)</title>
+    <style>
+        p {
+            border: 1px solid black;
+            outline-color : red;
+        }
+        .dotted {
+            outline-style: dotted;
+        }
+        .dashed {
+            outline-style: dashed;
+        }
+        .solid {
+            outline-style: solid;
+        }
+        .double {
+            outline-style: double;
+        }
+        .groove {
+            outline-style: groove;
+        }
+        .ridge {
+            outline-style: ridge;
+        }
+        .inset {
+            outline-style: inset;
+        }
+        .outset {
+            outline-style: outset;
+        }
+        .none {
+            outline-style: none;
+        }
+        .hidden {
+            outline-style: hidden;
+        }
+
+        /*2*/
+        .solid2px {
+            outline-style: solid;
+            outline-color: violet;
+            outline-width: 2px;
+        }
+        .solid5px {
+            outline-style: solid;
+            outline-color: coral;
+            outline-width: 5px;
+        }
+        .dash_thin {
+            outline-style: dashed;
+            outline-color: violet;
+            outline-width: thin;
+        }
+        .dash_thick {
+            outline-style: dashed;
+            outline-color: coral;
+            outline-width: thick;
+        }
+
+         /*3*/
+        .red {
+			outline-style: dashed;
+            outline-color: red;
+        }
+        .green {
+			outline-style: dashed;
+            outline-color: green;
+        }
+        .blue {
+            outline-style: dashed;
+            outline-color: blue;
+        }
+        .invert {
+            outline-style: dashed;
+            outline-color: invert;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. 아웃라인 : HTML요소의 가장 바깥 부분을 둘러싸고 있는 아웃라인 부분의 스타일을 설정.
+                     outline속성은 border와 비슷하지만 테두리속성과 달리 HTML요소의 전체 크기에 포함되지 않는다.
+                     *** border를 쓰되 박스크기를 유지하고 싶다면 해당 박스모델 css에 box-sizing : border-box; 효과를 준다.
+    -->
+    <h1>1. outline-style 속성을 이용한 외곽선의 모양 변경</h1>
+
+    <p class="dotted">outline-style 속성값을 dotted로 한 단락</p>
+    <p class="dashed">outline-style 속성값을 dashed 한 단락</p>
+    <p class="solid">outline-style 속성값을 solid로 한 단락</p>
+    <p class="double">outline-style 속성값을 double로 한 단락</p>
+    <p class="groove">outline-style 속성값을 groove로 한 단락</p>
+    <p class="ridge">outline-style 속성값을 ridge로 한 단락</p>
+    <p class="inset">outline-style 속성값을 inset로 한 단락</p>
+    <p class="outset">outline-style 속성값을 outset로 한 단락</p>
+    <p class="none">outline-style 속성값을 none로 한 단락</p>
+    <p class="hidden">outline-style 속성값을 hidden로 한 단락</p>
+
+    <br><hr><br>
+
+    <!-- 2. outline-width 속성 : 아웃라인 두께 설정, 예약어인 thin, medium, thick을 사용하여 설정 가능 -->
+    <h1>2. outline-width 속성을 이용한 외곽선의 두께 설정</h1>
+
+    <p class="solid2px">outline-width 속성값을 2px로 한 단락</p>
+    <p class="solid5px">outline-width 속성값을 5px로 한 단락</p>
+    <p class="dash_thin">outline-width 속성값을 thin로 한 단락</p>
+    <p class="dash_thick">outline-width 속성값을 thick로 한 단락</p>
+
+    <br><hr><br>
+
+    <!-- 3. outline-color 속성 : 색상뿐만 아니라 색반전을 나타내는 invert속성값을 사용할 수 있음 -->
+    <h1>3. outline-color 속성을 이용한 외곽선의 색상 변경</h1>
+    <p class="red">outline-color 속성값을 red로 한 단락</p>
+    <p class="green">outline-color 속성값을 green로 한 단락</p>
+    <p class="blue">outline-color 속성값을 blue로 한 단락</p>
+    <p class="invert">outline-color 속성값을 invert로 한 단락</p>
+</body>
+</html>

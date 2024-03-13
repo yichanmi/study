@@ -19,10 +19,10 @@
             border: 2px solid #CD5C5C;
         }
         .maxheight {
-            max-height: 30px;
+            max-height: 50px;
             background-color: greenyellow;
             overflow: auto;
-            white-space: nowrap; /*가로스크롤바*/
+            /*white-space: nowrap; /*가로스크롤바*/
         }
         .min-width {
             min-width: 500px;
@@ -30,7 +30,7 @@
         }
         .min-height {
             min-height: 100px;
-            background-color: greenyellow;
+            background-color: darkkhaki;
         }
     </style>
 </head>
@@ -63,14 +63,23 @@
 
     <!-- 4. max-height 속성 : html요소가 가질 수 있는 최대 높이를 설정, 기본값은 none, 해당 html요소의 크기에 따라 높이가 자동으로 설정 -->
     <!-- 만약 헤당 요소의 높이가 설정된 최대 높이보다 클 경우, 수직 스크롤바를 생성 -->
-    <h1>max-height속성</h1>
+    <h1>4. max-height속성</h1>
+    <p>- max-height는 컨텐츠 내용이 설정한 높이보다 커지면 수직 스크롤바가 생기면서 최대 높이값을 유지합니다.</p>
     <p class="maxheight">이 div요소는 max-height속성을 50px로 설정했습니다.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ligula non ligula iaculis semper at vitae ante. Sed condimentum viverra sollicitudin. Phasellus sodales ipsum nec nulla luctus, in luctus ipsum vestibulum. Pellentesque vehicula lectus a ex tincidunt, eget pellentesque nisl posuere. Vestibulum sed purus sapien. Aenean consequat urna sit amet quam pulvinar, in interdum augue volutpat. Donec ex leo, feugiat vel lorem non, blandit venenatis elit. Vestibulum eu erat eget ante consequat iaculis.
     </p>
 
     <br><hr><br>
 
     <!-- 5. min-height 속성 : html요소가 가질 수 있는 최소 높이. 해당 html요소의 높이를 설정된 높이 이하로 제한. 즉 height속성값이 min-height속성값 이하로 낮아지지 않도록. -->
-    <h1>min-height속성</h1>
-    <p class="min-height">이 div요소는 min-height속성을 100px 설정했습니다.</p>
+    <!-- min-height가 300px이면 최소 300px의 높이를 유지하면서 div태그 내의 컨텐츠(내용,텍스트)들이 300px이 넘어설 경우 그에 맞게 높이가 늘어난다.
+         일반 height속성은 div태그 내 컨텐츠(내용,텍스트)가 300px이 넘어가면 튀어나와 버림
+    -->
+    <h1>5. min-height속성</h1>
+    <p class="min-height">이 div요소는 min-height속성을 100px 설정했습니다.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ligula non ligula iaculis semper at vitae ante. Sed condimentum viverra sollicitudin. Phasellus sodales ipsum nec nulla luctus, in luctus ipsum vestibulum. Pellentesque vehicula lectus a ex tincidunt, eget pellentesque nisl posuere. Vestibulum sed purus sapien. Aenean consequat urna sit amet quam pulvinar, in interdum augue volutpat. Donec ex leo, feugiat vel lorem non, blandit venenatis elit. Vestibulum eu erat eget ante consequat iaculis.</p>
+
+    <h3>5-1. 일반 height ▼ : 컨텐츠가 height보다 넘어가면 내용이 튀어나옴</h3>
+    <p class="wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ligula non ligula iaculis semper at vitae ante. Sed condimentum viverra sollicitudin. Phasellus sodales ipsum nec nulla luctus, in luctus ipsum vestibulum. Pellentesque vehicula lectus a ex tincidunt, eget pellentesque nisl posuere. Vestibulum sed purus sapien. Aenean consequat urna sit amet quam pulvinar, in interdum augue volutpat. Donec ex leo, feugiat vel lorem non, blandit venenatis elit. Vestibulum eu erat eget ante consequat iaculis.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ligula non ligula iaculis semper at vitae ante. Sed condimentum viverra sollicitudin. Phasellus sodales ipsum nec nulla luctus, in luctus ipsum vestibulum. Pellentesque vehicula lectus a ex tincidunt, eget pellentesque nisl posuere. Vestibulum sed purus sapien. Aenean consequat urna sit amet quam pulvinar, in interdum augue volutpat. Donec ex leo, feugiat vel lorem non, blandit venenatis elit. Vestibulum eu erat eget ante consequat iaculis.
+    </p>
 </body>
 </html>
