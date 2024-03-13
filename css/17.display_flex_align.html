@@ -26,6 +26,23 @@
             border: 2px solid blue;
             text-align: center;
         }
+        .container2 {
+            height: 100%;
+            border: 3px dotted black;
+            display: flex;
+
+            flex-direction: row; /*row : x축으로 정렬할래요*/
+            /*flex-direction: row-reverse; /*x축 : 우에서 좌로 정렬. item반대*/
+            /*flex-direction: column-reverse; /*y축 : 아래서부터 위로 정렬 */
+            /*flex-direction: column; /*column : y축 취에서 아래*/
+            
+            flex-wrap: wrap; /* 여러 아이템으로 설정한 너비값이 늘어나면 아이템이 저절로 아래로 깔린다. 반응형 웹에 좋음*/
+            justify-content: flex-start; /*왼쪽 시작점으로 정렬, row인 경우는 왼쪽, row-reverse인 경우는 오른쪽, column 위쪽 */
+            justify-content: flex-end; /*끝점(오른쪽)으로 정렬, row 오른족, column 아래쪽*/
+            justify-content: center; /*가운데 정렬*/
+            justify-content: space-around;
+            align-items: stretch;
+        }
     </style>
 </head>
 <body>
@@ -34,6 +51,16 @@
         <div class="item">a</div>
         <div class="item">b</div>
         <div class="item">c</div>
+    </div>
+
+    <br><hr><br>
+
+    <div class="container2">
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+        <div class="item">d</div>
+        <div class="item">e</div>
     </div>
 </body>
 </html>

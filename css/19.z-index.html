@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .position {
+            width: 180px;
+            height: 50px;
+        }
+        .static {
+            background-color: lightblue;
+            position: static;
+        }
+        .first {
+            background-color: orange;
+            position: fixed;
+            top: 90px;
+            left: 120px;
+        }
+        .last {
+            background-color: orange;
+            position: fixed;
+            top: 180px;
+            left: 120px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. z-index : html요소의 위치를 설정하게 되면 어떤 요소들은 설정된 위치 및 방식에 따라 서로 겹칠수 있음
+                      z-index속성은 이렇게 겹쳐지는 요소들이 쌓이는 스택(stack)의 순서
+
+                      - position속성이 static인 요소에는 z-index속성이 0으로 고정되어 있음.
+                      - z-index속성이 "양수"로 설정된 요소는 position속성이 static인 요소보다 앞으로 올라온다.
+                      - z-index속성이 "음수"로 설정된 요소는 position속성이 static인 요소보돠 뒤로 내려간다.
+
+                      즉, position속성이 static이 아닌 요소간에는 z-index속성값이 클수록 앞으로 올라오고, 작으면 작을수록 뒤로 내려간다.
+
+    -->
+    <!-- * 스택의 순서는 양수나 음서 모두 설정 가능하며, 크기가 클수록 앞쪽에 위치하고 작을수록 뒤쪽에 위치 -->
+    <h1>z-index 속성을 이용한 노출 순서 변경</h1>
+    <div>
+        <div class="static position">정적위치(static position)</div>
+        <div class="first position">고정위치(fixed position)</div>
+    </div>
+    <br><br>
+    <div>
+        <div class="static position">정적위치(static position)</div>
+        <div class="last position">고정위치(fixed position)</div>
+    </div>
+</body>
+</html>

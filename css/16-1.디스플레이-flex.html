@@ -17,31 +17,27 @@
             height: 100px;
         }
         .flex_container {
-            display: flex;
+            display: flex; /*이렇게 지정하면 기본 동작으로 자동으로 가로로 나란히 배치*/
             height: 100%;
             border: 1px solid darkmagenta;
-            flex-wrap: wrap;
         }
         .content {
+            gap : 10px;
             display: flex;
             flex-direction: column;
             width: 50%;
             height: 100%;
             background-color: yellow;
             border: 1px solid black;
-            flex-wrap: wrap; /*flex 아이템들이 flex container의 크기를 벗어났을때 줄을 바꿔서 배치 하도록 함.*/
         }
         .box {
+            border-radius: 8px;
             height: 100px;
             border: 1px solid slateblue;
         }
         .footer {
             height: 100px;
             border: 1px solid aqua;
-        }
-
-        .container {
-            display: flex;
         }
     </style>
 </head>
@@ -71,7 +67,18 @@
     <h1>1. flexbox : 웹페이지의 레이아웃을 쉽게 하기 위한 속성</h1>
     <div class="header">헤더</div>
 
-    <div class="flex_container">
+    <div class="flex_container"><!-- 최상위부모  -->
+        <div class="content"> <!-- 부모 -->
+            <div class="box">세로박스하나<br>dsdsdddddddddddddddddddddddddddddddddddddddddd<br>dadass<br>dsads<br>dasd<br></div>
+            <div class="box">세로박스둘</div>
+            <div class="box">세로박스셋</div>
+            <div class="box">세로박스넷</div>
+            <div class="box">세로박스다섯</div>
+            <div class="box">세로박스여섯</div>
+            <div class="box">세로박스일곱</div>
+            <div class="box">세로박스여덟</div>
+        </div>
+
         <div class="content">
             <div class="box">세로박스하나</div>
             <div class="box">세로박스둘</div>
@@ -95,11 +102,5 @@
     </div>
 
     <div class="footer">푸터</div>
-
-    <div class="container">
-        <div class="item">a</div>
-        <div class="item">b</div>
-        <div class="item">c</div>
-    </div>
 </body>
 </html>
