@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>포지셔닝</title>
+    <style>
+        .container {
+            border: 3px solid red;
+            width: 100%;
+            height: 1000px;
+            position: relative;
+        }
+        .position {
+            width: 150px;
+            height: 50px;
+            top: 100px;
+            left: 120px;
+        }
+        .static {
+            border: 3px solid black;
+            position: static;
+        }
+        .relative {
+            border: 3px solid green;
+            position: relative;
+        }
+        .fixed {
+            border: 3px solid orange;
+            position: fixed;
+        }
+        .absolute {
+            border: 3px solid blue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        ** 정리 **
+                        아래 위치 모두 부모 위치 기준으로 위치함.
+        1. 정적위치(static) : static인 정적위치 요소는 top,right,left,right 속성값이 영향을 받지않음. 변경x
+        2. 고정위치(fixed) : 뷰포트 기준으로 위치함, 스크롤시에도 항상 같은 곳에 위치
+        3. 상대위치(relative) : HTML부모 요소를 기준으로 위치하나 position의 영향을 받지않고 top,bottom,right,left 같은 위치값의 영향을 받음.
+        4. 절대위치(absolute) : position의 속성값이 static이 아닌 부모요소를 기준으로 설정(부모요소에 position 속성이 없다면 그 위의 상위 부모를 계속 찾음)
+        
+    -->
+    <h1>정적 위치(static position) 지정 방식의 특징</h1>
+    <div class="container">
+        <div class="static position">정적 위치(static position)</div>
+        <div class="relative position">상대 위치(relative position)</div>
+        <div class="fixed position">고정 위치(fixed position)</div>
+        <div class="absolute position">절대 위치(absolute position)</div>
+    </div>
+</body>
+</html>
