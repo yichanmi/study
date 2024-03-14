@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        /* Content, Padding, Margin, Border */
+        div.content {
+            background-color: rgb(200, 200 , 200);
+            /*Content 크기 조절을 위한 width, height*/
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border: 10px solid green;
+            margin: 40px;
+        }
+        span {
+            border: 1px solid red;
+
+            /*아래는 인라인요소의 높이 너비를 주는 방법*/
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+        div.padding {
+            border: 1px solid black;
+            /* padding-top: 20px; */
+            /* padding-left: 20px; */
+            /* padding-bottom: 20px; */
+            /* padding-right: 20px; */
+            padding: 20px;
+        }
+        div.margin {
+            border: 1px solid red;
+            margin: 20px;
+        }
+        .shape {
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. Content : width, height로 너비와 높이를 지정가능 
+                    => 인라인 레벨 요소는 width,height가 적용x -> 인라인 요소는 콘텐츠만큼의 영역을 갖기 때문
+                        만약 인라인요소의 너비와 높이를 지정하고 싶다면 display : inline-block 으로 변경
+                    : inline-block은 블록과 인라인 중간형태로 인라인형태로 배치되며 내부는 블록처럼 표시한다(블록 속성의 width height 등의 속성을 사용할 수 있다).
+    -->
+    <div class="content"></div>
+    <span>Hello Css</span>
+
+    <div class="padding">
+        검색 엔진 등 포털 서비스를 중심으로 블로그, 카페, 포스트 등의 커뮤니티 서비스를 비롯하여 뉴스, 스포츠, 연예, 쇼핑 등 다양한 콘텐츠 주제판을 제공하고 있다. 라인이라는 자체적 메신저, 지식백과 서비스를 통해 검색 결과에서도 믿을 만한 정보를 쉽게 찾아볼 수 있도록 하고 있으며, 국어, 영어, 중국어, 일본어를 비롯한 33개의 어학사전을 제공하여 전문 DB를 구축하고 있다.
+        세계 대부분 국가의 검색 시장을 정복한 구글이 정복하지 못하고 여전히 토종 포털이 1위인 얼마 안 되는 나라 중 하나가 바로 대한민국이다. 그 외에는 일본의 야후! 재팬[2][3], 중국의 바이두[4], 러시아의 얀덱스가 있다.[5] 모두 대한민국의 주변 국가라는 것이 흥미로운 점이다. 그만큼 네이버가 대한민국 시장에 미치는 영향은 매우 크다.
+    </div>
+
+    <div class="margin">
+        검색 엔진 등 포털 서비스를 중심으로 블로그, 카페, 포스트 등의 커뮤니티 서비스를 비롯하여 뉴스, 스포츠, 연예, 쇼핑 등 다양한 콘텐츠 주제판을 제공하고 있다. 라인이라는 자체적 메신저, 지식백과 서비스를 통해 검색 결과에서도 믿을 만한 정보를 쉽게 찾아볼 수 있도록 하고 있으며, 국어, 영어, 중국어, 일본어를 비롯한 33개의 어학사전을 제공하여 전문 DB를 구축하고 있다.
+        세계 대부분 국가의 검색 시장을 정복한 구글이 정복하지 못하고 여전히 토종 포털이 1위인 얼마 안 되는 나라 중 하나가 바로 대한민국이다. 그 외에는 일본의 야후! 재팬[2][3], 중국의 바이두[4], 러시아의 얀덱스가 있다.[5] 모두 대한민국의 주변 국가라는 것이 흥미로운 점이다. 그만큼 네이버가 대한민국 시장에 미치는 영향은 매우 크다.
+    </div>
+
+    <!-- 2. margin 중첩 
+        : HTML 요소를 세로로 배치할 경우 margin과 margin이 만날때 큰 margin값이 큰 쪽으로 겹쳐지는 것. 
+        요소를 가로로 배치할 경우에는 상관없지만 세로로 배치할 경우에는 값이 큰 margin만 적용된다.
+
+        즉, margin 20px + margin 25px = 55px이 아니라 25px(둘중 가장 큰 마진값이 적용)
+    -->
+    <div class="shape" style="margin-bottom: 40px;"></div>
+    <div class="shape"></div>
+</body>
+</html>

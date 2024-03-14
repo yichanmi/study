@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+    <style>
+        .border {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            /* border-top: 10px dotted red;
+            border-bottom: 5px dashed blue;
+            border-left: 1px solid yellow;
+            border-right: 3px solid cyan; */
+        }
+        .border-radius {
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+        .border-circle {
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black none;
+            border-radius: 50%; /*원 모양*/
+            background-color: blueviolet;
+        }
+        .content-box {
+            width: 100px;
+            height: 100px;
+            border: 10px solid blue;
+            margin: 10px;
+            padding: 20px;
+            box-sizing: content-box;
+        }
+        .border-box {
+            width: 100px;
+            height: 100px;
+            border: 10px solid red;
+            margin: 10px;
+            padding: 20px;
+            box-sizing: border-box; /*border-box시 */
+        }
+        .test-box {
+            width: 80px;
+            height: 80px;
+            border: 10px solid orange;
+            margin: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="border"></div>
+    <div class="border-radius"></div>
+    <div class="border-circle"></div>
+
+    <!-- box-sizing : 100px너비에서 border나 padding을 추가한다면 100px + (border 혹은 padding 값)px이 아니라
+                      100px(너비 또는 높이)안에 padding값이나 border값이 포함이 된다. 그만큼 content box는 줄어들게 된다.                
+    -->
+    <div class="content-box"></div>
+    <div class="border-box"></div>
+
+    <!-- box-sizing : border-box시 예를들어 width : 100px 이면 전체 너비는 margin + border + padding + content = 100px 
+         box-sizing : content-box시 예를들어 width : 100px 이면 전체 너비는 margin + border + padding + content(100px) = 100px + margin + border + padding 이다.
+    -->
+    <div class="test-box"></div>
+</body>
+</html>

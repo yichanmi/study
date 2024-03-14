@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main, section, article, div {
+            border: 1px solid black;
+            padding: 20px;
+        }
+        main {
+            max-width: 600px; /*최대가 600px을 넘지않도록 하겠다*/
+            margin: 0 auto;   /*상하여백 :0, 좌우여백은 auto로 균일하게 맞추겠어요: 컨텐츠가 중앙으로 저절로 배치 */
+            background-color: yellow;
+        }
+        section {
+            background-color: violet;
+            position: relative;
+        }
+        article {
+            background-color: cyan;
+        }
+        div {
+            background-color: white;
+        }
+        div.relative {
+            position: relative;
+            right: 20px;
+            /* top: -10px; */
+        }
+        div.absolute {
+            position: absolute;
+            background-color: grey;
+            top: 0px;
+            left: 0px;
+        }
+        div.fixed {
+            position: fixed;
+            background-color: blue;
+            bottom: 0xp;
+            right: 30px;
+            border-radius: 50%;
+        }
+        div.sticky {
+            position: sticky;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. static : 요소가 HTML 문서에서 일반적인 흐름(inline이면 왼쪽->오른쪽 나열 / block이면 위 -> 아래 나열 )을 따라 배치, 기본값 -->
+    <!-- 2. relative : 배치가 되는 방식은 relative와 흡사하지만 static과 달리 위치속성인 top,left,right,bottom 사용이 가능함. -->
+    <!-- 3. absoleute : 요소가 문서의 일반적인 흐름을 따르지않게 한다. absolute는 position: static 속성을 가지고 있지않는 부모를 기준으로 움직인다.
+                        만약 부모 중에 포지션이 relative, absolute, fixed인 태그가 없다면 가장 위인 태그인 body가 기준이 된다.      
+    -->
+    <!-- 4. sticky : sticky옵션은 HTML문서 안에서 static과 같이 일반적인 흐름을 따라가다가 스크롤 위치가 임계점(감지)에 이르면 fixed와 같이 박스를 화면에 고정시칸다
+                     주로 header의 메뉴 등에 자주 쓰임.
+    -->
+    
+    <!-- 5. 관련 속성인 z-index : HTML요소가 겹칠때 어느 객체가 앞으로 나오고, 뒤에 나올지 배치 순서를 결정하는 순서
+                                : relative,absolute,fixed 일때만 적용됨
+                                 z-index가 높을 수록 가장 앞으로 배치됨
+    -->
+    <main>
+        main
+        <section>
+            section
+            <article>
+                article
+                <div>static</div>
+                <div class="relative">relative</div>
+                <div class="absolute">absolute</div>
+                <div class="fixed">fixed</div>
+                <div class="sticky">sticky</div>
+
+                <div style="height: 1000px;"></div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
