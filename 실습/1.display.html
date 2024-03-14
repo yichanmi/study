@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        div, h2 {
+            border: 1px solid red;
+            /* display: none; => 요소 숨김처리, 숨긴 영역이 표시되지 않음 */
+            /* visibility: hidden; => 요소를 숨기되 숨긴 요소의 content영역이 남아있음 */
+        }
+        span, a {
+            border: 1px solid green;
+        }
+        article > div, article > span {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+        /* article div {}  */
+    </style>
+</head>
+<body>
+        <h1>1. Display Block</h1>
+        <div>content</div>
+        <div>content</div>
+        <div>content</div>
+        <div>content</div>
+        <h2>title</h2>
+
+        <!-- <article>
+            <div>
+                1
+                <div>
+                    2
+                    <div>
+                        3
+                    </div>
+                </div>
+            </div>
+        </article> -->
+
+        <hr>
+
+        <!-- inline태그는 width와 height 내부 속성을 가지고 있지않음. -->
+        <h1>2. Display Inline</h1>
+        <span>span content</span>
+        <span>span content</span>
+        <span>span content</span>
+        <span>span content</span>
+        <span>span content</span>
+        <a href="#">link</a>
+
+        <br><hr>
+
+        <!-- * display : inline-block 적용 
+                 => inline처럼 컨텐츠 만큼만 차지하여 가로로 배치되지만 block의 속성도 가지고 있어 내부 속성인 width와 height등 과 같은 값을 변경가능 
+        -->
+        <article>
+            <h1>3. Display Inline Block</h1>
+            <div>content</div>
+            <div>content</div>
+            <div>content</div>
+            <span>span content</span>
+            <span>span content</span>
+            <span>span content</span>
+        </article>
+</body>
+</html>
