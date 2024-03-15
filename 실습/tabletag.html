@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tag</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+        }
+        .col1 {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Table 기본</h1>
+    <table>
+        <caption>프로필 테이블</caption><!-- 표에 대한 설명 -->
+        <tr>
+            <th>이름</th>
+            <th>취미</th>
+            <th>특기</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>사진찍기</td>
+            <td>개발</td>
+        </tr>
+        <tr>
+            <td>나야나</td>
+            <td>워너원</td>
+            <td>노래</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h1>Table Group 태그</h1>
+    <table>
+        <caption>학급 점수</caption>
+        <!-- 테이블 그룹 함수 작성-->
+        <colgroup>
+            <col class="col1"/>
+            <col class="col2"/>
+            <col class="col3"/>
+            <col class="col4"/>
+            <col class="col5"/>
+            <col class="col6"/>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>반</th>
+                <th>이름</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+                <th>코딩</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="3">1반</td>
+                <td>홍길동</td>
+                <td>90</td>
+                <td>100</td>
+                <td>76</td>
+                <td>43</td>
+            </tr>
+            <tr>
+                <!-- <td>1반</td> -->
+                <td>둘리</td>
+                <td>40</td>
+                <td>54</td>
+                <td>80</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <!-- <td>1반</td> -->
+                <td>짱구</td>
+                <td>50</td>
+                <td>94</td>
+                <td>60</td>
+                <td>80</td>
+            </tr>
+        </tbody>
+
+        <!-- tfoot태그 안은 rowspan , colspan에 병합이 되지않는다. -->
+        <tfoot>
+            <tr>
+                <td colspan="2">평균</td>
+                <td>90.5</td>
+                <td>90.5</td>
+                <td>93.4</td>
+                <td>93.6</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

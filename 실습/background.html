@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <style>
+        .red {
+            background-color: red;
+            width: 120px;
+            height: 120px;
+        }
+        .image {
+            background: url("../html/img/pattern.png") repeat top right fixed;
+            /* background-image: url("../html/img/pattern.png"); */
+            /* background-repeat: repeat; */
+            /* background-position: top right; */
+            width: 200px;
+            height: 400px;
+            border: 1px solid black;
+            
+            /*div태그내 이미지를 가로로 배치시키기 위해 인라인블럭으로 바꿔줌*/
+            display: inline-block;
+
+            /*내용이 이미지크기보다 넘쳐흐를때*/
+            overflow: hidden; /*넘쳐나는 내용을 숨김*/
+            overflow-y: scroll;
+        }
+        .attachment-scroll {
+            /*스크롤시 배경화면이 고정됨*/
+            /*윈도우화면의 뷰포트 스크롤시 같이 이미지가 위로 올라감*/
+            background-attachment: scroll;
+        }
+        .attachment-fixed {
+            /*스크롤시 배경화면이 고정됨*/
+            /*윈도우화면의 뷰포트 스크롤시 같이 이미지가 위로 올라가지않음*/
+            background-attachment: fixed;
+        }
+        .attachment-local {
+            /*스크롤시 배경화면이 고정되지않고 바뀜*/
+            background-attachment: local;
+        }
+
+
+        /*부가적인 배경화면 설정시*/
+        .background-size {
+            /*보통 backgroud-image는 부가적인 배경화면에 자주 쓰이므로 background-size : cover; background-position : center; 로 자주 쓰임*/
+            background-image: url("../html/img/다람쥐.jpg");
+            background-repeat: no-repeat;
+            border: 1px solid black;
+            width: 600px;
+            height: 300px;
+
+            /*이미지가 짤리지않고 모두 나옴*/
+            /* background-size: contain; */
+
+            /*이미지를 자동으로 맞춰짐*/
+            /* background-size: auto; */
+
+            /*HTML요소를 모두 차지함*/
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        /*배경 그라데이션 linear-gradient()함수 이용 */
+        .linear-gradient {
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+            background: linear-gradient(to top, red, blue);
+            background: linear-gradient(red, blue);
+            background: linear-gradient(to top right, red, blue); /*사선방향 그라데이션*/
+            background: linear-gradient(45deg, red, blue); /*45도 각도로 그라데이션*/
+            background: linear-gradient(to right, red, blue, green, yellow); /*색상을 여러개 넣을수있음*/
+            background: linear-gradient(to right, red 50%, blue 80%, green 90%, yellow 100%); /*50%까진 red로 50~80%까진 blue로 .....*/
+        }
+
+        /*배경 원형그라데이션 radial-gradient() 함수 이용 */
+        .radial-gradient {
+            width: 500px;
+            height: 200px;
+            border: 1px solid blue;
+            background: radial-gradient(white, yellow, red);
+            background: radial-gradient(circle at 10% 50%, white, yellow, red); /*x축으로 10%, y축으로 50%만큼 원점 이동 */
+        }
+    </style>
+</head>
+<body>
+    <h3>background-color</h3>
+    <div class="red"></div>
+
+    <h3>background-iamge</h3>
+    <div class="image attachment-scroll">
+        <h3>background-acttachment : scroll</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tenetur vitae ducimus qui enim suscipit fuga rem repellendus vero magni eum deserunt, perspiciatis porro totam, eos temporibus autem soluta adipisci.
+        Voluptates perspiciatis nisi iure fuga nesciunt facere necessitatibus molestiae ratione reiciendis dicta, magni, quod eius, aperiam doloremque. Nobis asperiores itaque laboriosam, assumenda, eligendi atque consequuntur aliquam animi fuga distinctio adipisci.
+        Similique, perferendis vitae rem cumque corrupti, animi tempore amet officiis nihil assumenda, illum commodi quo fugiat unde at autem laborum est reiciendis maiores dolore nemo? Nulla eos laudantium nostrum atque.
+        Deleniti voluptates nemo illo tempora autem quod numquam est repudiandae dolorem amet tempore, magnam laborum laboriosam culpa? Fuga aut porro consequuntur, odit placeat similique ea, debitis neque illo, quis ducimus!
+        Illum facilis voluptatum amet ex nam repellendus illo quas voluptatibus minus. Labore explicabo, consectetur adipisci voluptate dolores nostrum. Id deserunt tempora beatae qui quae quos doloribus odio, ratione quaerat consectetur?
+        Ullam saepe autem quibusdam deserunt doloremque, voluptatem deleniti veritatis nemo non architecto perspiciatis, vitae enim. Reiciendis sequi dicta ut veritatis eius nulla deserunt et asperiores maxime? Sequi, laboriosam. Nisi, ex?
+        Illum incidunt architecto, eligendi fugiat commodi, ipsum ad exercitationem sapiente expedita consectetur illo dolor aspernatur nobis eaque pariatur voluptate cum debitis aperiam, repudiandae accusantium ipsa beatae quaerat error? Debitis, nisi!
+        Consequuntur, fuga necessitatibus quis temporibus minima corrupti totam? Tempore eius at dolorem blanditiis quia autem, id dicta ad suscipit ea sapiente facilis dolores excepturi. Ducimus vel id sed voluptatum eius?
+    </div>
+
+    <div class="image attachment-fixed">
+        <h3>background-attachment : fixed</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tenetur vitae ducimus qui enim suscipit fuga rem repellendus vero magni eum deserunt, perspiciatis porro totam, eos temporibus autem soluta adipisci.
+        Voluptates perspiciatis nisi iure fuga nesciunt facere necessitatibus molestiae ratione reiciendis dicta, magni, quod eius, aperiam doloremque. Nobis asperiores itaque laboriosam, assumenda, eligendi atque consequuntur aliquam animi fuga distinctio adipisci.
+        Similique, perferendis vitae rem cumque corrupti, animi tempore amet officiis nihil assumenda, illum commodi quo fugiat unde at autem laborum est reiciendis maiores dolore nemo? Nulla eos laudantium nostrum atque.
+        Deleniti voluptates nemo illo tempora autem quod numquam est repudiandae dolorem amet tempore, magnam laborum laboriosam culpa? Fuga aut porro consequuntur, odit placeat similique ea, debitis neque illo, quis ducimus!
+        Illum facilis voluptatum amet ex nam repellendus illo quas voluptatibus minus. Labore explicabo, consectetur adipisci voluptate dolores nostrum. Id deserunt tempora beatae qui quae quos doloribus odio, ratione quaerat consectetur?
+        Ullam saepe autem quibusdam deserunt doloremque, voluptatem deleniti veritatis nemo non architecto perspiciatis, vitae enim. Reiciendis sequi dicta ut veritatis eius nulla deserunt et asperiores maxime? Sequi, laboriosam. Nisi, ex?
+        Illum incidunt architecto, eligendi fugiat commodi, ipsum ad exercitationem sapiente expedita consectetur illo dolor aspernatur nobis eaque pariatur voluptate cum debitis aperiam, repudiandae accusantium ipsa beatae quaerat error? Debitis, nisi!
+        Consequuntur, fuga necessitatibus quis temporibus minima corrupti totam? Tempore eius at dolorem blanditiis quia autem, id dicta ad suscipit ea sapiente facilis dolores excepturi. Ducimus vel id sed voluptatum eius?
+    </div>
+
+    <div class="image attachment-local">
+        <h3>background-attachemnt : local</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tenetur vitae ducimus qui enim suscipit fuga rem repellendus vero magni eum deserunt, perspiciatis porro totam, eos temporibus autem soluta adipisci.
+        Voluptates perspiciatis nisi iure fuga nesciunt facere necessitatibus molestiae ratione reiciendis dicta, magni, quod eius, aperiam doloremque. Nobis asperiores itaque laboriosam, assumenda, eligendi atque consequuntur aliquam animi fuga distinctio adipisci.
+        Similique, perferendis vitae rem cumque corrupti, animi tempore amet officiis nihil assumenda, illum commodi quo fugiat unde at autem laborum est reiciendis maiores dolore nemo? Nulla eos laudantium nostrum atque.
+        Deleniti voluptates nemo illo tempora autem quod numquam est repudiandae dolorem amet tempore, magnam laborum laboriosam culpa? Fuga aut porro consequuntur, odit placeat similique ea, debitis neque illo, quis ducimus!
+        Illum facilis voluptatum amet ex nam repellendus illo quas voluptatibus minus. Labore explicabo, consectetur adipisci voluptate dolores nostrum. Id deserunt tempora beatae qui quae quos doloribus odio, ratione quaerat consectetur?
+        Ullam saepe autem quibusdam deserunt doloremque, voluptatem deleniti veritatis nemo non architecto perspiciatis, vitae enim. Reiciendis sequi dicta ut veritatis eius nulla deserunt et asperiores maxime? Sequi, laboriosam. Nisi, ex?
+        Illum incidunt architecto, eligendi fugiat commodi, ipsum ad exercitationem sapiente expedita consectetur illo dolor aspernatur nobis eaque pariatur voluptate cum debitis aperiam, repudiandae accusantium ipsa beatae quaerat error? Debitis, nisi!
+        Consequuntur, fuga necessitatibus quis temporibus minima corrupti totam? Tempore eius at dolorem blanditiis quia autem, id dicta ad suscipit ea sapiente facilis dolores excepturi. Ducimus vel id sed voluptatum eius?
+    </div>
+
+    <hr>
+
+    <!-- 부가적인 배경화면 크기 설정 -->
+    <h3>background-size</h3>
+    <div class="background-size"></div>
+
+    <!-- 그라데이션 -->
+    <h3>linear-gradient</h3>
+    <div class="linear-gradient"></div>
+    
+    <h3>radial-gradient</h3>
+    <div class="radial-gradient"></div>
+
+    <div style="height: 1000px; width: 10px;background-color: red;"></div>
+
+    
+</body>
+</html>

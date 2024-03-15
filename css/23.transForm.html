@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransForm & Transition</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: lightgray;
+        }
+        .outline, .box {
+            width: 60px;
+            height: 60px;
+        }
+        .outline {
+            border: 3px solid yellow;
+            margin: 0 auto; /*중앙정렬*/
+            margin-top: 20px;
+        }
+        .box {
+            background-color: blue;
+        }
+
+        /*TransForm & Transition*/
+        /*이동*/
+        .box1 {
+            transform: translate(10px, 10px);
+        }
+        /*확대 축소*/
+        .box2 {
+            transform: scaleX(2); /*X축 가로길이가 2배 확대*/
+            transform: scaleX(0.5); /*X축 가로길이가 2배 축소*/
+            transform: scale(2, 0.5); /*x축으로 2배 확대, y축으로 2배 축소*/
+        }
+
+        /*회전*/
+        .box3 {
+            transform: rotateX(45deg); /*45도*/
+            transform: rotateY(45deg);
+            transform: rotate(45deg); /*rotateZ()과 같은 결과*/
+            transform: rotateZ(45deg); /*rotate()과 같은 결과*/
+        }
+        /*입체감을 주기 위해 box3의 부모요소를 선택*/
+        /* .outline-box3 {
+            perspective: 60px;
+        } */
+
+        /*왜곡:기울이기??*/
+        .box4 {
+            transform: skewX(15deg);
+            transform: skewY(15deg);
+            transform: skew(15deg, 20deg);
+        }
+
+
+        /*transtion : 부드럽게 움직이게??*/
+        .box1 {
+            /*또는 all*/
+            /* transition-property: all; */
+            /*몇초동안*/
+            /* transition-duration: 1s; */
+            /*transition-delay: 1s; /*1초 뒤에 실행되라*/
+
+            /*transition-timing-function : linear : 일정하게 */
+            /*transition-timing-function : ease-in : 천천히->속도증가 */
+            /*transition-timing-function : ease-out : 빠르게->속도감소 */
+            /* transition-timing-function: ease-out;          */
+
+            /*transtion : 몇초동안 delay transotion-timing-function*/
+            transition: 1s ease-out;
+        }
+        .box1:hover {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="outline">
+        <div class="box box1"></div>
+    </div>
+    <div class="outline">
+        <div class="box box2"></div>
+    </div>
+    <div class="outline outline-box3">
+        <div class="box box3"></div>
+    </div>
+    <div class="outline">
+        <div class="box box4"></div>
+    </div>
+</body>
+</html>
