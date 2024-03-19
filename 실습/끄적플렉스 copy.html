@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex2</title>
+    <style>
+        .container {
+            background-color: powderblue;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+        }
+        .item {
+            background-color: tomato;
+            color: white;
+            border: 1px solid white;
+            /*각각의 element가 n분의1로 전체 여백을 채움*/
+            /* flex-grow: 0; */
+        }
+
+        .item:nth-child(1) {
+            /*기본 크기를 200px*/
+            /* flex-basis: 200px; */
+            /* flex-grow: 1; */
+            flex-basis: 150px;
+
+             /*flex-shrink가 총 3개 중 1로 선언하면 3/1을 공간분담해서 뷰포트 크기 줄일때 3/1만큼 더 빨리 줄인다*/
+            flex-shrink: 1;
+        }
+        .item:nth-child(2) {
+            /*기본 크기를 200px*/
+            /* flex-basis: 200px; */
+            /* flex-grow: 1; */
+            flex-basis: 150px;
+
+            /*flex-shrink가 총 3개 중 2로 선언하면 3/1을 공간분담해서 뷰포트 크기 줄일때 3/2만큼 더 빨리 줄인다*/
+            flex-shrink: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
