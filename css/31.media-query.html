@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <style>
+        /*
+        min-width : 최소 400px이상일때 배경화면 색을 변경하겠다. 즉 400px~쭉 css변경 400px이상
+        max-width : 최대 400px까지 배경화면색을 변경하겠다. 즉 0px~400px까지 css변경 400px이하
+        */
+        /* @media screen and (min-width:400px) {
+            body {
+                background-color: red;
+            }
+        } */
+
+        /*최소 400px ~ 600px 이하까지 배경색을 blue로 지정하겠다*/
+        /* @media screen and (min-width:400px) and (max-width : 600px) {
+            body {
+                background-color: blue;
+            }
+        } */
+
+        /*400px이하이면 배경색을 pink로 지정하겠다*/
+        /* @media screen and (max-width:400px) {
+            body {
+                background-color: pink;
+            }
+        } */
+
+        /*
+        0~400px : blue
+        401px ~ 600px : red
+        601 ~ : yellow
+        */
+        @media screen and (max-width: 400px) {
+            body {
+                background-color: blue;
+            }
+        }
+        @media screen and (min-width : 401px) and (max-width : 600px) {
+            body {
+                background-color: red;
+            }
+        }
+        @media screen and (min-width : 601px) {
+            body {
+                background-color: yellow;
+            }
+        }
+
+        /*인쇄화면에서의 미디어쿼리 사용방법 print : 적용후 인쇄미리보기 */
+        @media print {
+            h1 {
+                font-size: 120px;
+                color: blue;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias quisquam quasi illum delectus saepe adipisci reprehenderit dolorem veniam animi! Odio magnam atque quo, voluptatibus repellat blanditiis dicta sit laboriosam eum!</p>
+</body>
+</html>

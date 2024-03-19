@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        border: 3px dotted black;
+        flex-direction: column-reverse; /*아래->위*/
+        flex-direction: row-reverse; /*우->좌*/
+        flex-direction: column;/*y축: 위->아래*/
+        flex-direction: row;/*x축: 좌->우*/
+
+        /*item의 width가 먹히게 되면서 아이템너비가 크게되면 다음줄로 넘어감 : 한 라인이 아닌 여러개의 라인으로 아이템을 배치하고자할때*/
+        /* flex-wrap: wrap; */
+
+        /*아이템 정렬방식 justify-content속성 */
+        /*1. 시작점 기준 정렬 : flex-direction : row일때 justify-content : flex-start는 시작점으로 정렬 => 왼쪽->오른쪽으로 정렬되므로 시작점이 왼쪽
+          flex-direction : column일때 justify-content : flex-start는 시작점으로 정렬 => 오른쪽->완쪽으로 정렬되므로 시작점이 오른쪽
+         */
+        justify-content: flex-start;
+
+        /*2. 끝점 기준 정렬, row인 경우는 오른쪽, column인 경우는 왼쪽*/
+        justify-content: flex-end;
+
+        /*3. 가운데 정렬*/
+        justify-content: center;
+    }
+    .item {
+        background-color: greenyellow;
+        border: 2px solid blue;
+        width: 30px;
+        text-align: center;
+    }
+</style>
+<body> 
+    <!-- flexbox를 적용하고싶은 최상위 컨테이너 태그에 display:flex를 적용하면 주축을 이용하여 배치가능 -->
+    <div class="container">
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+        <div class="item">d</div>
+        <div class="item">e</div>
+    </div>
+</body>
+</html>

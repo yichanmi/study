@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style-type: none;
+            box-sizing: border-box;
+        }
+        .header-container {
+            border: 1px solid palegoldenrod;
+            display: flex;
+            flex-direction: row;
+            height: 7vh;
+            line-height: 7vh;
+        }
+        .header-ul {
+            display: flex;
+            justify-content: right;
+        }
+        .header-left {
+            width: 30%;
+        }
+        .header-right {
+            width: 70%;
+        }
+        .item {
+            margin: 5px 5px;
+        }
+
+
+        .container {
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+        }
+        .container-item1 {
+            width: 10vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container-item2 {
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+        }
+        .item2-content {
+            padding: 5px;
+        }
+        .img-wrap {
+            display: flex;
+            flex-direction: column;
+        }
+        .img-wrap img {
+            padding: 2px;
+            border-radius: 5px;
+        }
+        .footer-container {
+            background-color: rgb(240, 231, 231);
+        }
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        #mypage:hover {
+            background-color: antiquewhite;
+        }
+        .item1-bottom {
+            display: block;
+            background-color: yellowgreen;
+            border-radius: 8px;
+            text-align: center;
+            height: 100px;
+            line-height: 100px;
+            margin-top: 50px;
+            color: white;
+        }
+        .img-text {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="header-left">
+            <ul>
+                <a href="#" class="item">홈로고</a>
+                <a href="#" class="item">보러가기</a>
+            </ul>
+        </div>
+        <div class="header-right">
+            <ul class="header-ul">
+                <li class="item"><a href="#">마이페이지</a></li>
+                <li class="item"><a href="#">장바구니</a></li>
+                <li class="item"><a href="#">로그인</a></li>
+                <li class="item"><a href="#">공지사항</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+       <div class="container-item1">
+            <div class="item-wrap">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">장바구니</a></li>
+                    <li><a href="#" id="mypage">마이페이지</a></li>
+                    <li><a href="#">찜목록</a></li>
+                </ul>
+            </div>
+
+            <div class="item1-bottom"><a href="#">광고 오늘의 집</a></div>
+       </div>
+       <div class="container-item2">
+            <div class="item2-content">
+                <div class="img-wrap">
+                    <div class="img-text"><img src="/html/img/cat.jpg" alt="" width="150px" height="150px">p</div>
+                    <div class="img-text"><img src="/html/img/cat.jpg" alt="" width="150px" height="150px">ds</div>
+                </div>
+            </div>
+            <div class="item2-content">
+                <img src="/html/img/다람쥐.jpg" alt="" width="120px" height="150px">
+                <img src="/html/img/다람쥐.jpg" alt="" width="120px" height="150px">
+                <img src="/html/img/다람쥐.jpg" alt="" width="120px" height="150px">
+                <img src="/html/img/다람쥐.jpg" alt="" width="120px" height="150px">
+                <img src="/html/img/다람쥐.jpg" alt="" width="120px" height="150px">
+                <img src="/html/img/다람쥐.jpg" alt="" width="120px" height="150px">
+            </div>
+       </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer-div1">국적</div>
+        <div class="footer-div2">
+            <ul class="footer-ul">
+                <li><a href="#" class="item">광고</a></li>
+                <li><a href="#" class="item">비지니스</a></li>
+                <li><a href="#" class="item">개인정보처리방침</a></li>
+                <li><a href="#" class="item">약관</a></li>
+                <li><a href="#" class="item">설정</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1 ,user-scalable=no">
+    <!--
+        * 메타 뷰포트 태그 지정하는 법
+        <meta name="viewport" content="속성1=값1,......">
+
+        - width : 뷰포트 가로
+        - height : 뷰포트 세로
+        - user-scalable : 사용자 확대/축소 가능 여부 (줌인 가능 ? 'YES' : 'NO'로 지정)
+        - initial-scale : 초기 화면 비율
+        - maximum-scale : 최대 화면 비율
+        - minimum-scale : 최소 화면 비율
+    -->
+    <title>반응형</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            background-color: blue;
+            width: 50vw; /*ex) 모바일화면 크기가 375 x 667이면 너비가 375/2 = 187.5px. 즉, 뷰포트 너비의 절반(50vmin) */
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. 뷰포트 : 뷰포트란 웹 브라우저에서 실제 내용이 표시되는 영역 -->
+    <h1>안녕하세요 </h1>
+    <hr>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsam deleniti id iste veniam fuga molestias quae soluta amet similique modi vero possimus voluptatem quisquam earum, minus laborum blanditiis atque.
+    </p>
+    <div></div>
+</body>
+</html>

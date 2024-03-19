@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute & fixed</title>
+    <style>
+        #parent, #other, #grand {
+            border: 5px solid tomato;
+        }
+        #grand {
+            position: relative;
+        }
+        #me {
+            background-color: black;
+            color: white;
+            /*position: absolute만 선언시 부모element위치 기준으로 자신의 위치 생성 */
+            /*position: absolute를 주고 left:0 top:0식으로 오프셋값을 줄때부터 부모element가 html이 되는 것. 그 전까지는 부모element기준으로 잡음.*/
+            position: absolute;
+            left: 0;
+            right: 0;
+            /*따라서 absolute는 부모와 링크가 끊기므로 별도로 너비, 높이값을 주고자하면 직접 줘야한다 아래처럼*/
+            /* width: 100px; */
+            /* height: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <div id="other">other</div>
+    <div id="grand">
+        grand
+        <div id="parent">
+            parent
+            <div id="me">me</div>
+        </div>
+    </div>
+</body>
+</body>
+</html>

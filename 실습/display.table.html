@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display table</title>
+    <style>
+        /*완전 table은 아니지만 배치형태가 table과 흡사함*/
+        .display_table {
+            display: table; /*<table>*/
+            width: 100%;
+        }
+        .display_tb_header {
+            display: table-header-group; /*<thead>*/
+        }
+        .display_tb_body {
+            display: table-row-group; /*<tbody>*/
+        }
+        .display_tb_row {
+            display: table-row; /*<tr>*/
+        }
+        .display_tb_sell {
+            display: table-cell; /*<td>, <th>*/
+        }
+    </style>
+</head>
+<body>
+    <div class="display_table">
+        <div class="display_tb_header">
+            <div class="display_tb_row"><!-- tr -->
+                <div class="display_tb_sell">a</div><!-- th td -->
+                <div class="display_tb_sell">b</div>
+                <div class="display_tb_sell">c</div>
+            </div>
+        </div>
+        <div class="display_tb_body">
+            <div class="display_tb_row"><!-- tr -->
+                <div class="display_tb_sell">a1</div><!-- th td -->
+                <div class="display_tb_sell">a2</div>
+                <div class="display_tb_sell">a3</div>
+            </div>
+
+            <div class="display_tb_row"><!-- tr -->
+                <div class="display_tb_sell">b1</div><!-- th td -->
+                <div class="display_tb_sell">b2</div>
+                <div class="display_tb_sell">b3</div>
+            </div>
+
+            <div class="display_tb_row"><!-- tr -->
+                <div class="display_tb_sell">c1</div><!-- th td -->
+                <div class="display_tb_sell">c2</div>
+                <div class="display_tb_sell">c3</div>
+            </div>
+        </div>
+    </div>
+
+    <hr><!-- 위의 display : table과 아래에 table태그 결과가 비슷한 그리드로 그려짐 -->
+
+    <table>
+        <tr>
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+        </tr>
+
+        <tr>
+            <td>a1</td>
+            <td>a2</td>
+            <td>a3</td>
+        </tr>
+        <tr>
+            <td>b1</td>
+            <td>b2</td>
+            <td>b3</td>
+        </tr>
+        <tr>
+            <td>c1</td>
+            <td>c2</td>
+            <td>c3</td>
+        </tr>
+    </table>
+</body>
+</html>

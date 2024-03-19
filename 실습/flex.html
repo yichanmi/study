@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        border: 3px dotted black;
+        flex-direction: column-reverse; /*아래->위*/
+        flex-direction: row-reverse; /*우->좌*/
+        flex-direction: row;/*x축: 좌->우*/
+        flex-direction: column;/*y축: 위->아래*/
+    }
+    .item {
+        background-color: greenyellow;
+        border: 2px solid blue;
+        width: 150px;
+        text-align: center;
+    }
+</style>
+<body> 
+    <!-- flexbox를 적용하고싶은 최상위 컨테이너 태그에 display:flex를 적용하면 주축을 이용하여 배치가능 -->
+    <div class="container">
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+    </div>
+</body>
+</html>
