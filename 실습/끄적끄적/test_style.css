@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+}
+h1 {
+    font-size: 48px;
+    font-weight: 100;
+}
+.contents1 {
+    font-size: 20px;
+    font-weight: lighter;
+}
+.context2 {
+    font-size: 18px;
+}
+.context3 {
+    font-size: 14px;
+    font-weight: 100;
+}
+.contents1-bold {
+    font-size: 18px;
+    font-weight: bold;
+}
+.result {
+    font-size: 24px;
+}
+
+/*-------------------------------------------------------------------*/
+
+.intro_bg {
+    background-image: url("/실습/끄적끄적/이미지/intro.png");
+    width: 100%;
+    height: 718px;
+}
+
+.header {
+    /*자식 ul li태그들을 가로로 배치하기 위해*/
+    display: flex;
+
+    width: 1280px;
+    height: 86px;
+    margin: auto;
+}
+.searchArea {
+    width: 300px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.5);
+    margin-top: 24px;
+}
+.searchArea > form > input {
+    border: none;
+    width: 250px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    padding-left: 10px;
+}
+.searchArea > form > span {
+    width: 50px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+
+    /*.header의 높이*/
+    line-height: 86px;
+
+    /*전체화면 1280px - .searchArea클래스의 width값 300px */
+    width: calc(1280px - 300px);
+
+    color: #fff;
+}
+
+.nav > li {
+    margin-left: 84px;
+}
+
+.nav > li > a {
+    color: white;
+}
+.intro_text {
+    width: 100%;
+    margin: 231px auto;
+    text-align: center;
+}
+.intro_text > h1, .intro_text > h4{
+    color: white;
+}
+
+/*inro 아래 4개 리스트*/
+.amount {
+    position: relative;
+    top: -66px;
+
+    display: flex;
+    width: 1280px;
+    margin: auto;
+
+    /*그림자*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.amount > li {
+    flex: 1;
+    height: 132px;
+    background-color: white;
+}
+.amount > li > div {
+    text-align: center;
+    height: 57px;
+    margin-top: 37px;
+}
+
+/*.amount안에 li 안에 마지막 자식요소가 아닌 div에만 적용해라*/
+.amount > li:not(:last-child) > div {
+    border-right: 1px solid #E1E1E1;
+}
+
+/*main텍스트*/
+.main-text0 {
+    width: 100%;
+    height: 601px;
+
+    /*배경화면 여백 강제로 margin으로 떙겨주기*/
+    background-color: #F1F2F3;
+    margin-top: -132px;
+}
+.main-text0 > h1 {
+    padding-top: 116px;
+    text-align: center;
+}
+.main-text0  > .contents1 {
+    text-align: center;
+}
+
+/*전체 너비는 100%이고, 아래 리스트들은 100%안에 1280px 너비를 가지고있음*/
+/*icon작업*/
+.icons {
+    display: flex;
+    width: 1280px;
+    height: 302px;
+    margin: 0 auto;
+}
+.icons > li {
+    /*자식요소들이 각 한자리씩 차지한다.*/
+    flex: 1;
+    height: 302px;
+    background-color: white;
+    text-align: center;
+    margin-top: 49px;
+}
+.icons > li > .icon-img {
+    margin-top: 18px;
+}
+
+/*margin으로 줘버리면 오른쪽 maigin여백이 밀려나서 위 박스랑 간격이 맞지않게됨*/
+.icons > li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.icons .contents2 {
+    width:280px;
+    margin:auto;
+    letter-spacing: -1px;
+  }
+
+  
+.more {
+    width: 100px;
+    height: 30px;
+    background-color: #2F7AF4;
+    color: white;
+    font-size: 12px;
+    line-height: 30px;
+    margin: 25px auto;
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flex2</title>
     <style>
-        .container {
+        .container1 {
             background-color: powderblue;
             height: 200px;
             display: flex;
@@ -37,15 +37,81 @@
             /*flex-shrink가 총 3개 중 2로 선언하면 3/1을 공간분담해서 뷰포트 크기 줄일때 3/2만큼 더 빨리 줄인다*/
             flex-shrink: 2;
         }
+
+
+        /*holy grail layout*/
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            border-bottom: 1px solid gray;
+            padding-left: 20px;
+        }
+        footer {
+            border-top: 1px solid gray;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+        }
+        .content nav {
+            border-right: 1px solid gray;
+        }
+        .content aside {
+            border-left: 1px solid gray;
+        }
+
+        nav, aside {
+            flex-basis: 150px;
+
+            /*content영역만 줄어들게끔*/
+            flex-shrink: 0;
+        }
+        main {
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <div class="item">1</div>
         <div class="item">2</div>
         <div class="item">3</div>
         <div class="item">4</div>
         <div class="item">5</div>
+    </div> -->
+
+
+
+    <!-- holy grail layout -->
+    <div class="container">
+        <header>
+            <h1>생활코딩</h1>
+        </header>
+        <section class="content">
+            <nav>
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>js</li>
+                </ul>
+            </nav>
+            <main><!--메인컨텐츠-->
+                생활코딩은 일반인을 위한 코딩 수업
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ad odio hic necessitatibus vel voluptates, dolor officia iusto deleniti corrupti est itaque dolorem facere consectetur doloribus consequuntur numquam reiciendis incidunt?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda eius ullam commodi molestiae atque impedit ad doloremque placeat distinctio neque, eveniet provident iste voluptas ut dicta deleniti debitis alias modi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa mollitia officia, beatae tempora qui consequatur, accusantium cum aliquam voluptatibus quasi suscipit consectetur explicabo laboriosam quae adipisci deserunt? Architecto, beatae minima!
+            </main>
+            <aside>
+                AD
+            </aside>
+        </section>
+        <footer>
+            <a href="https://www.naver.com">홈페이지</a>
+        </footer>
     </div>
 </body>
 </html>
