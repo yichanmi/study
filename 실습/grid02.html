@@ -27,65 +27,47 @@
 
             gap: 10px;
         }
-        .item {
-            border: 1px solid red;
-        }
-        .parent {
-            width: 500px;
-            border: 1px solid blue;
+
+        /*여기부터*/
+        .content {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
         }
-        .child {
-            border: 1px solid red;
+        .item {
+            border: 1px solid cornflowerblue;
         }
-        .item1, .item2, .item3 {
-            border: 1px solid black;
-            background-color: palegreen;
+        .item1 {
+            /* grid-row-start: 1; */
+            /* grid-row-end: 5; */
+            /* grid-row: 1 / 5; */
+
+            grid-row: 1 / span 4; /*위와 동일 1부터 4칸을 차지*/
+        }
+        .item7 {
+            /*1~n개*/
+            /*아래는 item2태그를 두번째 컬럼줄부터 5번째 줄까지 총 세칸을 병합한다*/
+            /* grid-column-start: 2; */
+            /* grid-column-end: 5; */
+            grid-column: 2 / 5; /*위와 동일 표현*/
+            grid-column: 2 / span 3; /*위와 동일 span 3 : 3칸*/
         }
     </style>
 </head>0
 <body>
     <h1>display : grid</h1>
-    <!-- <div class="container"> -->
-        <!-- <div class="item color1">item1</div>
-        <div class="item item2 color2">itme2</div>
-        <div class="item color3">itme3</div>
-        <div class="item color4">itme4</div>
-        <div class="item color5">itme5</div>
-        <div class="item color6">itme6</div>
-        <div class="item color7">itme7</div>
-        <div class="item color8">itme8</div>
-        <div class="item color9">itme9</div>
-        <div class="item color10">itme10</div> -->
-        <div class="parent">
-            <div class="child">
-                <div class="item1">1</div>
-                <div class="item2">2</div>
-                <div class="item3">3</div>
-            </div>
-
-            <div class="child2">
-                <div class="item1">1</div>
-                <div class="item2">2</div>
-                <div class="item3">3</div>
-            </div>
-            <div class="child3">
-                <div class="item1">1</div>
-                <div class="item2">2</div>
-                <div class="item3">3</div>
-            </div>
-            <div class="child4">
-                <div class="item1">1</div>
-                <div class="item2">2</div>
-                <div class="item3">3</div>
-            </div>
-            <div class="child5">
-                <div class="item1">1</div>
-                <div class="item2">2</div>
-                <div class="item3">3</div>
-            </div>
-        </div>
-    <!-- </div> -->
+    <div class="content">
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+        <div class="item item4">item4</div>
+        <div class="item item5">item5</div>
+        <div class="item item6">item6</div>
+        <div class="item item7">item7</div>
+        <div class="item item8">item8</div>
+        <div class="item item9">item9</div>
+        <div class="item item10">item10</div>
+    </div>
 </body>
 </html>
