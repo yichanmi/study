@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-box</title>
+    <style>
+        .container {
+            display: flex;
+            width: 100%;
+            /*align-items : baseline => 텍스트를 균등한 위치로 배치시켜줘! */
+            align-items: baseline;
+
+            /* justify-content: space-between; */
+        }
+        .item {
+            border: 1px solid black;
+        }
+        .item1 {
+            padding: 10px;
+            /*flex-grow :0(디폴트) => 컨테이너 너비에 맞게 아이템을 채움 :1*/
+            flex-grow: 1;
+            flex-shrink: 3;
+
+            /*item1은 기본적으로 다른 아이템과 대비해 50%의 너비를 차지해!*/
+            flex-basis: 50%;
+
+            /*flex로 grow shrink basis 한번에 표기 */
+            flex: 1 3 50%;
+        }
+        .item2 {
+            flex-grow: 1;
+            flex-shrink: 1;
+            /*item1은 기본적으로 다른 아이템과 대비해 30%의 너비를 차지해!*/
+            flex-basis: 30%;
+        }
+        .item3 {
+            flex-grow: 2;
+            flex-shrink: 1;
+            /*item1은 기본적으로 다른 아이템과 대비해 10%의 너비를 차지해!*/
+            flex-basis: 10%;
+        }
+        .item4 {
+            flex-grow: 3;
+            /*flex-shrink : 0(디폴트) => 화면을 줄일때 4배 더 줄여라 */
+            flex-shrink: 1;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+    </div>
+</body>
+</html>
