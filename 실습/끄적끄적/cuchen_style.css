@@ -13,8 +13,17 @@ a {
 body {
     height: auto;
 }
-.bold {
+.bold{
     font-weight: bold;
+}
+.bold400 {
+    font-weight: 400;
+}
+.boid100 {
+    font-weight: 100;
+}
+.boid800 {
+    font-weight: 800;
 }
 .white {
     color: white;
@@ -24,6 +33,9 @@ body {
 }
 .font13 {
     font-size: 13px;
+}
+.font14 {
+    font-size: 14px;
 }
 .font16 {
     font-size: 16px;
@@ -37,6 +49,7 @@ body {
     width: 100%;
     height: 100%;
     min-height: 100vh;
+    background-color: #3B3938;
 }
 #sec_wrap {
     position: relative;
@@ -106,13 +119,14 @@ body {
     top: 0;
 }
 .bg_video {
-    position: absolute;
+    position: fixed;
     width: 100%;
     box-sizing: border-box;
     background-size: cover;
 }
 .bg_video .bgvid {
-    position: fixed;
+    /* width: 100%; */
+    height: 100%;
     background-size: cover;
     z-index: -100;
 }
@@ -164,7 +178,7 @@ section.content .bg_content .bg_content2 {
     width: 100%;
     position: relative;
     background: url("https://www.cuchen.com/img/mainstory_bg.png") repeat-x top;
-    background-size: 95%;
+    background-size: 105%;
     z-index: 2;
 
     display: flex;
@@ -188,11 +202,12 @@ section.content .bg_content .bg_content2 {
 .inner_list {
     display: flex;
     position: relative;
-    padding: 5vw 10vw 10vw;
+    padding: 3vh 10vw 10vw;
     z-index: 3;
     background-image: linear-gradient(to top, white 60%, #FDFAF7 40%);
 }
 .inner_list .item {
+    position: relative;
     width: 26%;
     background-color: #F1F1F1;
     padding: 30px 30px 50px 30px;
@@ -217,14 +232,14 @@ section.content .bg_content .bg_content2 {
     height: 32px;
     background : url("https://www.cuchen.com/img/ico_more.svg") no-repeat center center;
     background-size: 100%;
-    bottom: 176px;
+    bottom: 7%;
 }
 .bg_content3 h1 {
     color: white;
     font-size: 6vw;
 }
 .business_title {
-    padding-left: 1vw;
+    display: flex;
 }
 .business_desc {
     font-size: 1.2vw;
@@ -235,10 +250,11 @@ section.content .bg_content .bg_content2 {
     display: flex;
     flex-wrap: wrap;
     padding: 4vw 0 0 8vw;
-    width: 100%;
+    width: 85%;
 }
 .business_list_item {
     border-left: 1px solid white;
+    padding-left: 1vw;
     width: calc(100% / 3);
 }
 /*1~3번까지의 자식요소*/
@@ -307,7 +323,6 @@ section.content .bg_content .bg_content2 {
 .bg_content5 {
     position: relative;
     background-color: white;
-    padding-bottom: 5vw;
 }
 .bg_content5 .inner {
     padding: 0 10vw;
@@ -493,465 +508,444 @@ section.content .bg_content .bg_content2 {
 }
 .foot_ccm > .ccm_img {
     padding-bottom: 5px;
-} 
-/* @media screen and (max-width : 780px){
-    .inner_list {
-        flex-direction: column;
-        padding: 0;
-    }
-    
-    .inner_list .item {
-       width: 100%;
-       margin-right: 0;
-       padding: 0;
-    }
-    .inner_list .item_img {
-        text-align: right;
-    }
-    .inner_list .item_desc {
-        padding: 10px 0 20px 0;
-    }
-} */
-
-@media screen and (max-width : 780px) {
-#sec_wrap {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    min-height: 100vh;
 }
-#header {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 84px;
-    line-height: 84px;
-
-    /*스크롤시 헤더고정을 위해 부모에게 position을 주고 헤더를 fixed고정 후 z-index 높게 */
-    position: fixed;
-    text-align: center;
-    box-sizing: border-box;
-    z-index: 11;
-}
-.logo_area {
-    margin: auto 0 ;
-}
-#header .home_logo {
-    display: block;
-    background: url("https://www.cuchen.com/img/logo.svg") no-repeat 0 / 100%;
-    width: 170px;
-    height: 28px;
-}
-.header_list {
+.footer_nav_mob_area {
     display: none;
 }
-.header_list li {
-    padding-right: 50px;
-    font-size: 18px;
-    letter-spacing: -0.08px;
-}
-.lang_selbox {
-    width: 100px;
-}
-.lang_selbox select {
-    background: url("https://www.cuchen.com/img/global.svg") no-repeat center right 24px / 24px auto;
-    padding: 5px;
-    border: none;
-    color: white;
-    box-sizing: border-box;
-    appearance: none; /*셀렉트박스 선택화살표 지움*/
-    background-position: 40px 0;
-    width: 100%;
-    outline: none;
-}
-/*메인 : 비디오 배경*/
-.content {
-    position: relative;
-    width: 100%;
-}
-.bg_img {
-    width: 100%;
-    height: 100%;
 
-    background-size: cover;
-    position: absolute;
-    background-position: center center;
-    z-index: 0;
-    top: 0;
-}
-.bg_video {
-    width: 100%;
-    position: absolute;
-    position: fixed;
-    background-size: cover;
-}
-.bg_video .bgvid {
-    position:fixed;
-    width: 100%;
-    background-size: cover;
-    z-index: -100;
-}
-.desc {
-    position: relative;
-    padding: 0;
-    z-index: 1;
-}
-.bg_content .desc .inner {
-    /* padding: 0; */
-    /* padding-top: 47vh; */
-}
-.inner .txt span {
-    display: block;
-    color: white;
-    font-size: 10.2vw;
-}
-.bg_content .desc .inner .desc_foot {
-    color: white;
-    text-align: left;
-    margin: 0;
-}
-.bg_content .desc .inner .desc_foot .desc_foot_text {
-    position: relative;
-}
-.bg_content .desc .inner .desc_foot .desc_foot_text::before {
-    content: "";
-    position: absolute;
-    background-color: white;
-    width: 1px;
-    height: 200px;
-    bottom: 100px;
-}
-.bg_content .desc .inner .desc_foot .desc_foot_text::after {
-    content: "";
-    position: absolute;
-    background-color: white;
-    width: 1px;
-    height: 200px;
-    top: 100px;
+
+@media screen and (max-width : 780px) {
+    #sec_wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+    }
+    #header {
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 4vw;
+    }
+    .logo_area {
+        margin: auto 0 ;
+    }
+    #header .home_logo {
+        display: block;
+        background: url("https://www.cuchen.com/img/logo.svg") no-repeat 0 / 100%;
+        width: 170px;
+        height: 28px;
+    }
+    .header_list {
+        display: none;
+    }
+    .lang_selbox {
+        width: 100px;
+    }
+    .lang_selbox select {
+        background: url("https://www.cuchen.com/img/global.svg") no-repeat center right 24px / 24px auto;
+        padding: 5px;
+        border: none;
+        color: white;
+        box-sizing: border-box;
+        appearance: none; /*셀렉트박스 선택화살표 지움*/
+        background-position: 40px 0;
+        width: 100%;
+        outline: none;
+    }
+    /*메인 : 비디오 배경*/
+    .bg_img {
+        width: 100%;
+        height: 100%;
+    
+        background-size: cover;
+        position: absolute;
+        background-position: center center;
+        z-index: 0;
+        top: 0;
+    }
+    .bg_video {
+        left: -105vw;
+        bottom: 123vh;
+    }
+    .bg_video .bgvid {
+        width: auto;
+        position: fixed;
+        background-size: cover;
+        z-index: -100;
+    }
+    .desc {
+        position: relative;
+        padding: 0;
+        z-index: 1;
+    }
+    .bg_content .desc .inner {
+        padding : 10vh 10vh 0 11vw;
+    }
+    .inner .txt span {
+        font-size: 16vw;
+    }
+    section.content .bg_content .bg_content2 {
+        background-color: red;
+    }
+    .bg_content .desc .inner .desc_foot {
+        color: white;
+        margin: 0 50% 40% 50%;
+    }
+    .bg_content .desc .inner .desc_foot .desc_foot_text {
+        position: relative;
+        right: 33.5vw;
+        bottom: -7vh;
+    }
+    .bg_content .desc .inner .desc_foot .desc_foot_text::before {
+        content: "";
+        position: absolute;
+        background-color: white;
+        width: 1px;
+        height: 5vh;
+        bottom: 6.5vh;
+    }
+    .bg_content .desc .inner .desc_foot .desc_foot_text::after {
+        content: "";
+        position: absolute;
+        background-color: white;
+        width: 1px;
+        height: 5vh;
+        top: 6.5vh;
+    }
+    
+    .bg_content2 {
+        background-size: auto;
+    }
+    .bg_content2 .text {
+        position: absolute;
+        padding: 2vw 2vh;
+    }
+    .bg_content2 text, .bg_content2 .img_left img {
+        width: 100vw;
+        height: 30vh;
+    }
+    .cuchen {
+        font-size: 6vw;
+        margin-bottom: 1.6vw;
+    }
+    .cuchen2 {
+        font-size: 1.9vw;
+        line-height: 2vw;
+    }
+    .inner_list {
+        background: white;
+        flex-direction: column;
+        padding: 6vw 2vw;
+    }
+    .inner_list .item {
+        width: 100%;
+    }
+    .inner_list .item_img {
+        float: right;
+    }
+    .inner_list .item_img img {
+        width: 18vw;
+    }
+    .inner_list .mob_align {
+        display: flex;
+        width: 40%;
+        flex-direction: column;
+    }
+    .bg_content3 {
+        padding: 6vh 2vw;
+    }
+    .more {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background : url("https://www.cuchen.com/img/ico_more.svg") no-repeat center center;
+        background-size: 100%;
+        bottom: 2vh;
+    }
+    .bg_content3 h1 {
+        color: white;
+        font-size: 6vw;
+    }
+    .bg_content3 > .business_mob {
+        padding-left: 2vw;
+    }
+    .business_title {
+        display: flex;
+    }
+    .business_desc {
+        font-size: 2vw;
+        line-height: 2.6vw;
+    }
+    .business_list {
+        padding: 4vh 3vw 0vh 3vw;
+        width: 100%;
+    }
+    .business_list_item {
+        border-left: 1px solid white;
+        padding-left: 1vw;
+        width: 50%;
+    }
+    .biz_icon {
+        display: inline-block;
+        background: url("https://www.cuchen.com/img/ico_biz-title.svg") no-repeat;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+    }
+    .biz_icon_01 {
+        background-position: 0 0;
+    }
+    .biz_icon_02 {
+        background-position: -24px 0;
+    }
+    .business_div {
+        padding: 10px 70px 20px 0;
+    }
+    .bg_content4 {
+        position: relative;
+        background: white;
+        padding: 6vw 2vw;
+    }
+    .title {
+        font-size: 6vw;
+        margin-bottom: 2.5vw;
+    }
+    .bg_content4 .inner span {
+        font-size: 2vw;
+        line-height: 2vw;
+    }
+    .bg_content4 .inner .right {
+        margin-left: 0;
+    }
+    .b2b_wrap {
+        flex-direction: column;
+    }
+    .b2b_txt {
+        margin-top: 20px;
+    }
+    .b2b_wrap .b2b_item {
+        padding-bottom: 2vh;
+    }
+    .b2b_img img {
+        width: 100%;
+        margin-right: 1px;
+    }
+    .b2b_txt strong {
+        display: block;
+        margin-bottom: 14px;
+    }
+    .b2b_item .more {
+        position: absolute;
+        right: 0;
+        bottom: 5%;
+    }
+    .bg_content4 .inner {
+        padding-bottom: 10vw;
+    }
+    .bg_content5 {
+        position: relative;
+        background-color: white;
+    }
+    .bg_content5 .inner {
+        padding: 0 2vw;
+    }
+    .bg_content5_txt {
+        padding-bottom: 1vh;
+    }
+    .bg_content5_txt strong {
+        font-size: 6vw;
+        margin-bottom: 1.6vw;
+        display: block;
+    }
+    .help_list {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .help_list .help_item {
+        width: 46%;
+        margin: 1vh 2vw 1vh 1vw;
+    }
+    .help_txt {
+        margin-top: 20px;
+        font-size: 13px;
+    }
+    
+    /*푸터*/
+    .footer_banner {
+        position: relative;
+        padding-top: 10vw;
+    }
+    .footer_main {
+        position: relative;
+        height: 13vh;
+        background: url("https://www.cuchen.com/img/foot_banner_bg.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .footer_main .inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    .footer_main .inner > span {
+        font-size: 24px;
+    }
+    .footer_main .inner .logo {
+        width: 19vw;
+    }
+    .footer_main .inner .logo > img {
+        width: 100%;
+    }
+    .footer {
+        background-color: #3B3938;
+        color: #999;
+        font-size: 1.18vw;
+    }
+    .footer_tit {
+        border-bottom: 1px solid #ccc;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+    .footer_tit::after {
+        content: "";
+        position: absolute;
+        background-color: #E85400;
+        border-radius: 100%;
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+    }
+    .footer_nav {
+        display: none;
+        /* padding: 2vh 2vw; */
+        /* width: 100%; */
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+    }
+
+    /* 모바일 푸터*/
+    .footer_nav_mob_area {
+        display: block;
+    }
+    .footer_nav_mob {
+        display: flex;
+    }
+    .footer_nav_mob_ul01, .footer_nav_mob_ul02 {
+        width: 100%;
+        padding: 0 1vw 0 2.5vw;
+    }
+    .footer_nav_mob_ul01 li, .footer_nav_mob_ul02 li {
+        width: 94%;
+        border-bottom: 1px solid #888;
+        padding: 2vh 0 2vh 0;
+        background: url("https://www.cuchen.com/img/arrow2.svg") no-repeat right center / 14px auto;
+    }
+    
+    .cuchen_list1 {
+        /* width: 32vw; */
+        width: 50%;
+    }
+    .cuchen_list2 {
+        /* width: 15vw; */
+        width: 50%;
+    }
+    .cuchen_list3 {
+        /* width: 18vw; */
+        width: 50%;
+    }
+    .cuchen_list4 {
+        /* width: 15vw; */
+        width: 50%;
+    }
+    .footer_nav ul li {
+        margin-bottom: 10px;
+    }
+    
+    /*푸터 아이콘*/
+    .sns_nav {
+        position: relative;
+        border-bottom: 1px solid #888;
+    }
+    .sns_nav .sns_icon_list {
+        display: flex;
+        justify-content: center;
+        padding: 8vw 10vw 3vh;
+    }
+    .sns_nav .sns_icon_list .sns_item {
+        padding-right: 10px;
+    }
+    .sns_nav .sns_icon_list .sns_item a span {
+        display: inline-block;
+        text-indent: -500em;
+        width: 34px;
+        height: 34px;
+        background: url("https://www.cuchen.com/img/sns_group.svg") no-repeat;
+    }
+    .sns_nav .sns_icon_list .sns_item a .sns_icon01 {
+        background-position: 0 0;
+    }
+    .sns_nav .sns_icon_list .sns_item a .sns_icon02 {
+        background-position: -39px 0;
+    }
+    .sns_nav .sns_icon_list .sns_item a .sns_icon03 {
+        background-position: -78px 0;
+    }
+    .sns_nav .sns_icon_list .sns_item a .sns_icon04 {
+        background-position: -117px 0;
+    }
+    .sns_nav .sns_icon_list .sns_item a .sns_icon05 {
+        background-position: -156px 0;
+    }
+    .sns_nav .sns_icon_list .sns_item a .sns_icon06 {
+        background-position: -195px 0;
+    }
+    
+    /*푸터 회사정보들*/
+    .footer_addr {
+        padding: 2vw 2vw;
+        flex-direction: column-reverse;
+    }
+    .footer_addr .com_addr {
+        width: 100%;
+        margin-top: 2.7vh;
+        padding-bottom: 3vh;
+    }
+    .footer_addr .com_copy {
+        padding-bottom: 2vh;
+    }
+    .foot_ccm .com_img {
+        text-align: center;
+    }
+    .foot_ccm .com_img select {
+        /*background : 'color' 'image' 'repeat' 'position'/'size'
+        /*background : color image repeat position/size origin clip attachment*/
+        /*auto는 각 해당 태그 요소의 성질에 맞춰서 동적으로 정해져서 magin-padding을 뚫고 나오지않음, 하지만 width : 100%는 padding-maigin을 뚫고 나옴*/
+                    /*색상     url                                     이미지반복 위치 / 배경화면 크기*/
+        background: #fff url("https://www.cuchen.com/img/arrow.svg") no-repeat center right 8px / 13px auto;
+        width: 100%;
+    }
+    .foot_ccm .ccm_img img {
+        width: 95vw;
+        height: 11vh;
+    }
+    .foot_ccm > .ccm_img {
+        padding-bottom: 3vh;
+    }
+    .mob {
+        display: block;
+    }
 }
 
-.bg_content2 {
-    width: 100%;
-    position: relative;
-    z-index: 2;
-
-    display: flex;
-    justify-content: space-between;
-}
-.bg_content2 .text {
-    position: absolute;
-    padding: 0;
-    box-sizing: border-box;
-}
-.bg_content2 text, .bg_content2 .img_left img {
-    width: 100%;
-    height: 100%;
-}
-.inner_list {
-    display: flex;
-    padding: 0;
-    flex-direction: column;
-    position: relative;
-    z-index: 3;
-}
-.inner_list .item {
-    width: 100%;
-    background-color: #F1F1F1;
-    padding: 0;
-    margin-right: 7px;
-    margin-bottom: 20px;
-}
-.inner_list .item_img {
-    text-align: right;
-}
-.inner_list .item_img img {
-    width: 11vw;
-    height: 11vh;
-}
-.inner_list .item_desc {
-    padding: 0;
-}
-
-.more {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    background : url("https://www.cuchen.com/img/ico_more.svg") no-repeat center center;
-    background-size: 100%;
-    bottom: 176px;
-}
-.bg_content3 {
-    padding: 0;
-}
-.bg_content3 h1 {
-    color: white;
-    font-size: 6vw;
-}
-.business_title {
-    display: flex;
-}
-.business_desc {
-    font-size: 1.2vw;
-    line-height: 32px;
-    padding-top: 2.2vw;
-}
-.business_list {
-    padding: 0;
-}
-.business_list_item {
-    border-left: 1px solid white;
-    width: calc(100% / 2);
-}
-
-.biz_icon {
-    display: inline-block;
-    background: url("https://www.cuchen.com/img/ico_biz-title.svg") no-repeat;
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-.biz_icon_01 {
-    background-position: 0 0;
-}
-.biz_icon_02 {
-    background-position: -24px 0;
-}
-.business_div {
-    padding: 0;
-}
-.bg_content4 {
-    position: relative;
-    background: white;
-    padding: 0;
-}
-.title {
-    font-size: 6vw;
-    margin-bottom: 2.5vw;
-}
-.bg_content4 .inner span {
-    font-size: 1.2vw;
-    line-height: 32px;
-}
-.right {
-    margin-left: 0;
-}
-.b2b_wrap {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5vw;
-}
-.b2b_txt {
-    margin-top: 20px;
-}
-.b2b_wrap .b2b_item {
-    position: relative;
-    margin-right: 1px;
-}
-.b2b_img img {
-    width: 100%;
-    margin-right: 1px;
-}
-.b2b_txt strong {
-    display: block;
-    margin-bottom: 14px;
-}
-.b2b_item .more {
-    position: absolute;
-    right: 16%;
-    bottom: -3px;
-}
-.bg_content4 .inner {
-    padding-bottom: 10vw;
-}
-.bg_content5 {
-    position: relative;
-    background-color: white;
-    padding-bottom: 5vw;
-}
-.bg_content5 .inner {
-    padding: 0;
-}
-.bg_content5_txt {
-    padding: 0;
-}
-.bg_content5_txt strong {
-    font-size: 6vw;
-    margin-bottom: 1.6vw;
-    display: block;
-}
-.help_list {
-    display: flex;
-    flex-wrap: wrap;
-}
-.help_list .help_item {
-    width: calc(100% / 3);
-    border: 1px solid lightgrey;
-    margin-right: 10px;
-    padding: 0;
-    text-align: center;
-}
-.help_txt {
-    margin-top: 20px;
-    font-size: 15px;
-}
-
-/*푸터*/
-.footer_banner {
-    position: relative;
-    padding-top: 10vw;
-}
-.footer_main {
-    position: relative;
-    height: 580px;
-    background: url("https://www.cuchen.com/img/foot_banner_bg.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.footer_main .inner {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-}
-.footer_main .inner > span {
-    font-size: 78px;
-}
-.footer_main .inner .logo {
-    width: 340px;
-}
-.footer_main .inner .logo > img {
-    width: 100%;
-}
-.footer {
-    background-color: #3B3938;
-    color: #999;
-    font-size: 1.18vw;
-}
-.footer_tit {
-    border-bottom: 1px solid #ccc;
-    margin: 0 50px 20px 0;
-    padding-bottom: 10px;
-}
-.footer_tit::after {
-    content: "";
-    position: absolute;
-    background-color: #E85400;
-    border-radius: 100%;
-    width: 10px;
-    height: 10px;
-    margin-left: 5px;
-}
-.footer_nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 13vh 10vw;
-}
-.footer_nav .cuchen_list1 .list_div {
-    display: flex;
-}
-.footer_nav .cuchen_list1 .list_div ul {
-    width: calc(100% / 3);
-    margin-right: 10px;
-}
-.cuchen_list1 {
-    width: 32vw;
-}
-.cuchen_list2 {
-    width: 15vw;
-}
-.cuchen_list3 {
-    width: 18vw;
-}
-.cuchen_list3 {
-    width: 18vw;
-}
-.cuchen_list4 {
-    width: 15vw;
-}
-.footer_nav ul li {
-    margin-bottom: 10px;
-}
-
-/*푸터 아이콘*/
-.sns_nav {
-    position: relative;
-    border-bottom: 1px solid lightgray;
-}
-.sns_nav .sns_icon_list {
-    display: flex;
-    justify-content: center;
-    padding: 3vw 10vw;
-}
-.sns_nav .sns_icon_list .sns_item {
-    padding-right: 10px;
-}
-.sns_nav .sns_icon_list .sns_item a span {
-    display: inline-block;
-    text-indent: -500em;
-    width: 34px;
-    height: 34px;
-    background: url("https://www.cuchen.com/img/sns_group.svg") no-repeat;
-}
-.sns_nav .sns_icon_list .sns_item a .sns_icon01 {
-    background-position: 0 0;
-}
-.sns_nav .sns_icon_list .sns_item a .sns_icon02 {
-    background-position: -39px 0;
-}
-.sns_nav .sns_icon_list .sns_item a .sns_icon03 {
-    background-position: -78px 0;
-}
-.sns_nav .sns_icon_list .sns_item a .sns_icon04 {
-    background-position: -117px 0;
-}
-.sns_nav .sns_icon_list .sns_item a .sns_icon05 {
-    background-position: -156px 0;
-}
-.sns_nav .sns_icon_list .sns_item a .sns_icon06 {
-    background-position: -195px 0;
-}
-
-/*푸터 회사정보들*/
-.footer_addr {
-    display: flex;
-    padding: 2vw 10vw;
-}
-.footer_addr .com_addr {
-    width: 55vw;
-    padding-bottom: 5vh;
-}
-.footer_addr .com_copy {
-    padding-bottom: 5vh;
-}
-.foot_ccm .com_img {
-    text-align: right;
-}
-.foot_ccm .com_img select {
-    /*background : 'color' 'image' 'repeat' 'position'/'size'
-    /*background : color image repeat position/size origin clip attachment*/
-    /*auto는 각 해당 태그 요소의 성질에 맞춰서 동적으로 정해져서 magin-padding을 뚫고 나오지않음, 하지만 width : 100%는 padding-maigin을 뚫고 나옴*/
-                /*색상     url                                     이미지반복 위치 / 배경화면 크기*/
-    background: #fff url("https://www.cuchen.com/img/arrow.svg") no-repeat center right 8px / 13px auto;
-    border: 1px solid #e1e1e1;
-    color: #4b4b4b;
-    width: 50%;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 4px;
-    padding: 0 50px 0 8px;
-    font-weight: 500;
-    appearance: none;
-}
-.foot_ccm .ccm_img img {
-    width: 292px;
-}
-.foot_ccm > .ccm_img {
-    padding-bottom: 5px;
-} 
+@media screen and (max-width : 1100px) {
+    .header_list li{
+        padding-right: 1rem;
+        font-size: 16px;
+        overflow: hidden;
+    }
 }
