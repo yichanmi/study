@@ -769,9 +769,6 @@ nav {
     html, body {
         font-size: 50%;
     }
-    .fix_bar {
-        display: none;
-    }
     .main_inner02 {
         flex-direction: column;
     }
@@ -830,5 +827,18 @@ nav {
     }
     .main_sec03 .inner_txt {
         width: 50%;
+    }
+    .fix_bar {
+        bottom: 0;
+    }
+    .fix_list {
+        display: flex;
+        flex-direction: column-reverse;
+        background: transparent;
+    }
+    .fix_list li:not(:nth-last-child(-n+2)),
+    .fix_list li p
+     {
+        display: none;
     }
 }
