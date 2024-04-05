@@ -838,7 +838,7 @@ nav {
     }
     .fix_list li:not(:nth-last-child(-n+2)),
     .fix_list li p
-     {
+    {
         display: none;
     }
 }
