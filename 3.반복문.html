@@ -5,15 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반복문</title>
 </head>
-<body>
-    hello! world! <br />
-    hello! world! <br />
-    hello! world! <br />
+<body class="test">
+    
 </body>
     <script>
-        while(true) {
-            document.write("hihihihihhi <br />");
-            break;
+        // var i = 0;
+        // while(i < 10) {
+        //     document.write(">_<" + i + " <br />");
+        //     i++;
+        // }
+
+        // 0~9까지 루프
+        // var test = document.querySelector('.test');
+        // for (var i = 0; i < 10; i++) {
+        //     document.write(">_<)" + i + " <br />");
+        //     test.b
+        // }
+        
+        // for (var i = 0; i < 100; i++) {
+        //     document.write("안녕! <br/>");
+        // }
+        // var i = 0;
+        // while(i < 100) {
+        //     document.write(">_< <br/>" + i);
+        //     i++;
+        // }
+
+        // for (var i = 1; i <= 100; i++) {
+        //     if (i < 10) {
+        //         document.write("00"+i + ">_< <br/>");
+        //     } else if (i < 100) {
+        //         document.write("0"+i + ">_< <br/>");
+        //     } else {
+        //         document.write(i + ">_< <br/>");
+        //     }
+        // }
+
+        for (var i = 0; i < 10; i++) {
+            for (var j = 0; j < 10; j++) {
+                document.write(i + "" + j + ">_< <br/>");
+                document.write(String(i) + String(j) + ">_< <br/>");
+            }
         }
     </script>
 </html>

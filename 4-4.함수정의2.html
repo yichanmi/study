@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 정의2</title>
+</head>
+<body>
+    <script>
+    //    var num = function(a) {
+    //         i = 0;
+    //         while(i < 10) {
+    //             document.write(i+a);
+    //             i++;
+    //         }
+    //    }
+    //    num(1);
+
+    //    var test = function(arg) {
+    //         for(var i = 1; i < arg; i++) {
+    //             document.write(arg+"*"+ i + "=" + arg * i + "<br/>");
+    //         }
+    //    }
+    //    test(9);
+
+       (function(arg) {
+            for (var i = 1; i < arg; i++) {
+                document.write(arg+"x"+ i + "=" + arg * i + "<br/>");
+            }
+       })(5);
+
+       // 익명함수 정의 방법 : 정의와 호출을 같이 선언함. => 1회성 호출
+    //    (function () {
+    //         i = 0;
+    //         while(i < 10) {
+    //             document.write(i);
+    //             i++;
+    //         }
+    //    }) ();
+    </script>
+</body>
+</html>

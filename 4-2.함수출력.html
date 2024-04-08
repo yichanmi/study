@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 출력</title>
+</head>
+<body>
+    <script>
+        function get_member1() {
+            return 'chanmi';
+
+            // return 뒤에 있는 코드는 이미 실행하고 그 함수가 종료되었기 때문에 호출안됨.
+            // 즉, 아래 코드는 모두 함수종료에 따라 실행되지 않는 코드.
+            return 'chanmi1';
+            return 'chanmi2';
+            return 'chanmi3';
+        }
+        function get_member2() {
+            return 'cat_cute';
+        }
+        alert(get_member1());
+        alert(get_member2());
+    </script>
+</body>
+</html>

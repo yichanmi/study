@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 요소 추가</title>
+</head>
+<body>
+    <script>
+        // 1. 배열 추가
+        var li = ['a', 'b', 'c', 'd', 'e'];
+        // li.push('f', 'g'); // 배열 끝으로 요소 추가
+        
+        // for (var i = 0; i < li.length; i++) {
+        //     document.write(li[i] + "<br/>");
+        // }
+
+        // var li2 = ['가', '나', '다', '라', '마']
+        // li2.unshift('가나나순'); // 배열 맨앞쪽으로 요소 추가
+        // for (var i = 0; i < li2.length; i++) {
+        //     document.write(li2[i] + "<br/>")
+        // }
+
+        // 2. 배열 제거
+        li.pop(); // 맨 끝 요소 제거
+        alert(li);
+
+        // 3. 배열 정렬
+        li.sort(); // 정렬
+        li.reverse(); //역순정렬
+        alert(li);
+    </script>
+</body>
+</html>
