@@ -396,7 +396,7 @@ nav {
     width: 24.2vw;
     /* width: 44.2rem; */
     height: 32.4rem;
-    top: -9rem;
+    bottom: 0;
     right: 0;
 }
 .main_sec03 h3 {
@@ -519,10 +519,8 @@ nav {
 .sec05_02 h1 {
     font-size: 4.3rem;
 }
-.sec05_center {
-    position: relative;
-}
 .sec05_center .inqery {
+    position: relative;
     width: 100%;
     display: flex;
     margin-top: 2rem;
@@ -541,8 +539,8 @@ nav {
     position: absolute;
     width: 21rem;
     height: 17rem;
-    top: 7.5rem;
-    right: 4rem;
+    bottom: 100%;
+    right: -2rem;
 }
 /*푸터*/
 .footer {

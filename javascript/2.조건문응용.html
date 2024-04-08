@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 응용</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .outer {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+        }
+        .inner {
+            /* position: relative; */
+            width: 100px;
+            height: 100px;
+            border: 2px solid palegreen;
+        }
+        .inner_inner {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">1
+        <div class="inner">2
+            <div class="inner_inner">3</div>
+        </div>
+    </div>
+    <script>
+        // var a = "1";
+        // if (a === 1) {
+        //     alert("실행");
+        // } else {
+        //     alert("실패");123
+        // }
+        // var id = prompt('아이디를 입력하세요');
+        // var pwd = prompt('비밀번호를 입력하세요');
+        // if (id == 'aaa' && pwd === '1234') { // 일치
+        //     alert('로그인하였습니다.');
+        // } else {
+        //     alert('아이디가 일치하지 않습니다.');
+        // }
+
+
+        // || 연산자
+        //  && 앞에 있는 조건이 false이면 뒤의 조건은 쳐다보지도 않는다.
+        // if ( (id == null || id == '') && id == 'chanmi' ) {
+        //     alert("!!!!!");
+        // }
+    </script>
+</body>
+</html>

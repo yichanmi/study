@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 - 조건문(if, else)</title>
+</head>
+<body>
+    <script>
+        // [결과] : 2 실행
+        if (false) {
+            alert(1);   // 거짓
+        } else if (true) {
+            alert(2);  // 참
+        } else if (true) {
+            alert(3);  // 참이지만 위 조건이 참이어서 이미 실행되었으므로 실행x
+        } else {
+            alert(4);
+        }
+        
+        // [결과] : 앞 조건들 모두 false이므로 else구문인 d가 실행
+        if (false) {
+            alert("a");
+        } else if (false) {
+            alert("b");
+        } else if (false) {
+            alert("c");
+        } else {
+            alert("d");
+        }
+    </script>
+</body>
+</html>
