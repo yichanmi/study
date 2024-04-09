@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 Object</title>
+</head>
+<body>
+    <!-- <ul>   
+        <script>
+            var arr = {'a' : 12 , 'b' : 15 , 'c' : 20};
+            for (key in arr) {
+                str = "<li>키는 " + key + "값은 : " + arr[key] + "</li>";
+                // document.write("<li>key : " + key + " value : " + arr[key]+ "</li>");
+                document.write(str);
+
+            }
+        </script>
+    </ul> -->
+    <ul class="list"></ul>
+    <script>
+        var arr = {'a' : 123, 'b' : 'hihi' , 'c' : 'cc!'};
+
+        // 1. for문
+        // for (var i = 0; i < Object.keys(arr).length; i++) {
+        //     var str = "";
+        //     str += "<li>" + arr.a + "</li>";
+        //     str += "<li>" + arr.b + "</li>";
+        //     str += "<li>" + arr.c + "</li>";
+        // }
+        // document.querySelector('.list').innerHTML = str;
+
+        // 2. for-in문
+        for (object in arr) {
+            var str = "";
+            str += "<li>키는 : " + object + " value : " +arr.a + "</li>";
+            str += "<li>키는 : " + object + " value : " +arr.b + "</li>";
+            str += "<li>키는 : " + object + " value : " +arr.c + "</li>";
+        }
+        document.querySelector('.list').innerHTML = str;
+    </script>
+</body>
+</html>

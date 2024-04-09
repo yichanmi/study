@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 Object</title>
+</head>
+<body>
+    <script>
+        // 1. 1번 방법
+        var grades = {
+            'list' : {'name' : 'myname', 'score' : 90, 'age' : '20'},
+            'show' : function() {
+                // 여기서 this는 grades
+                // console.log(this.list);
+                for(keys in this.list) {
+                    console.log("키 : " + keys + " 값 : " + this.list[keys]);
+                }
+            }
+        }
+        // console.log(grades['list']['name']);
+        // console.log(grades.list.age);
+        // console.log(grades.list.name);
+        // console.log(grades.list.score);
+
+        // 객체 안의 함수 호출
+        console.log(grades.show());
+
+        // 2. 2번 방법
+        var mypage = new Object();
+        mypage.name = 'myPage';
+        mypage.info = '내정보';
+        mypage.age = 20;
+        mypage.validation = function() {
+            if (mypage.age >= 20) {
+                console.log("20살이상!");
+            } else {
+                console.log("20살이하");
+            }
+        }
+        mypage.validation2 = function() {
+            console.log("ver2");
+            mypage.validation();
+        }
+
+        console.log(mypage.validation2());
+
+        // 3. 3번
+        function login(id, pwd) {
+            this.id = id;
+            this.pwd = pwd;
+            this.validation3 = function() {
+                if (this.id == '') {
+                    alert("id빈값");
+                    return false;
+                }
+
+                if (this.pwd == '') {
+                    alert('pwd빈값');
+                    return false;
+                }
+            }
+        }
+        console.log(login());
+    </script>
+</body>
+</html>
