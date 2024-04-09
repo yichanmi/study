@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체연습</title>
+</head>
+<body>
+    <div class="dog_div"></div>
+    <script>
+       function Dog(name, age, color) {
+            this.name = name; // 이름 프로퍼티
+            this.age = age;   // 나이 프로퍼티
+            this.color = color; // 색상 프로퍼티
+       }
+    //    var myDog = new Dog("뭉먕이", 5, "흰색"); // 이 객체는 dog라는 프로토타입을 가짐
+    //    document.querySelector('.dog_div').innerHTML = "<div>우리 강아지 이름은 : " + myDog.name + "고, 나이는  : " + myDog.age + "살이며, 털색은 : " + myDog.color + "이에요</div>"
+
+    // 2번 예제
+    var myDog = new Dog("뭉망이", 2, "하얀색");
+    // 품종관련 프로퍼티 추가
+    myDog.family = "웰시 코기";
+    myDog.desc = function() {
+        return this.age + this.family;
+    }
+    alert(myDog.desc());
+    </script>
+</body>
+</html>

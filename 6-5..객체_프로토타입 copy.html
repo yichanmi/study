@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체연습</title>
+</head>
+<body>
+    <div class="dog_div"></div>
+    <script>
+       function Dog(name, age, color) {
+            this.name = name; // 이름 프로퍼티
+            this.age = age;   // 나이 프로퍼티
+            this.color = color; // 색상 프로퍼티
+       }
+       // prototype을 이용한 현재 존재하고 있는 프로토타입에 새로운 프로퍼티나 메서드 추가
+       Dog.prototype.famaily = "웰시 코기"
+       Dog.prototype.num = function() {
+            let arr = {a : 10, b : 20, c : 30};
+            for(let dog in arr) {
+                console.log(arr[dog]);
+            }
+       }
+       Dog.prototype.desc = function() {
+            return this.age+ "살 " + this.famaily + "입니다."
+       }
+       
+       var myDog = new Dog("망뭉", 2, "하얀색"); // 생성자를 이용한 객체의 생성
+       alert(myDog.desc());
+       myDog.num();
+    </script>
+</body>
+</html>

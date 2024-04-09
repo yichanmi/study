@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체연습</title>
+</head>
+<body>
+    <input type="text" class="id_class" name="name" id="txt" value="ds">
+    <input type="submit" class="submit" value="전송">
+    <script>
+       var id = document.querySelector('.id_class');
+       var Chk = {
+            fn : {
+                  emptyChk : function() {
+                    console.log("!!");
+                }
+                , emptychk2 : function() {
+                    console.log("~~");
+                }
+            }
+           ,fn2 : {
+                lengthChk : function() {
+                    console.log("ddd");
+                }
+           } 
+       }
+       console.log(Chk.fn2.lengthChk());
+    </script>
+</body>
+</html>
