@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <script>
+        // 1
+        function calc(mode) {
+            var func = {
+                'plus' : function(left, right) {
+                    return left + right;
+                },
+                'minus' : function(left, right) {
+                    return left - right;
+                }
+            }
+            return func[mode];
+        }
+        // alert(calc('plus')(2, 1));
+        // alert(calc('minus')(2, 1));
+
+        // 2. 배열의 값으로서의 함수
+        var process = [
+            function(inp) { //process[0]
+                return inp + 10; 
+            },
+            function(inp) { //process[1]
+                return inp * inp;
+            },
+            function(inp) { //process[2]
+                return inp / 2; 
+            }
+        ];
+        var inp = 1;
+        for (var i = 0; i < process.length; i++) {
+            inp = process[i](inp);
+        }
+        alert(inp);
+    </script>
+</body>
+</html>

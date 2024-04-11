@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope(유효범위 또는 변수의 수명)</title>
+</head>
+<body>
+    <script>
+        var vscope = 'global'; // 전역변수
+        function fscope() {
+            var vscope = 'local'; // 지역변수
+        }
+        function fscope2() {
+            var vscope = 'local'; // 지역변수
+            alert(vscope);
+        }
+
+        // 아래와 같은 경우는 전역변수의 값을 변경한 것. 위는 지역변수의 값을 별도로 생성한 것.
+        function fscope3() {
+            vscope = 'local'; // 지역변수
+        }
+
+        // 아래는 지역변수 생성 후 지역변수의 값을 변경한 것이므로 전역변수는 변하지 않음.
+        function fscope4() {
+            var vscope = 'local';
+            vscope = 'local'; // 지역변수
+        }
+
+        fscope4();
+        alert(vscope);
+    </script>
+</body>
+</html>

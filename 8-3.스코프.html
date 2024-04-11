@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스코프3</title>
+</head>
+<body>
+    <script>
+
+        var MYAPP = {}; // 전역변수
+
+        MYAPP.calculator = { // 전역변수의 소속으로 만듬1
+            'left' : null,
+            'right' : null
+        }
+        MYAPP.coordinate = { // 전역변수의 소속으로 만듬2
+            'left' : null,
+            'right' : null
+        }
+
+        MYAPP.calculator.left = 10;
+        MYAPP.calculator.right = 20;
+
+        function sum() {
+            return MYAPP.calculator.left + MYAPP.calculator.right;
+        }
+        document.write(sum());
+
+        // 단 하나의 전역변수를 허용하고 싶지않다면.
+        // 아래처럼 익명함수로 만들어서 함수 호출과 동시에 실행하도록.
+        (function(){
+            var MYAPP = {};
+
+            MYAPP.calculator = {
+                'left' : null,
+                'right' : null
+            }
+            MYAPP.coordinate = {
+                'left' : null,
+                'right' : null
+            }
+
+            MYAPP.calculator.left = 10;
+            MYAPP.calculator.right = 20;
+
+            function sum() {
+                return MYAPP.calculator.left + MYAPP.calculator.right;
+            }
+            document.write(sum());
+        }() );
+    </script>
+</body>
+</html>

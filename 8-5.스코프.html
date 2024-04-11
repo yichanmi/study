@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정적 유효범위</title>
+</head>
+<body>
+    <script>
+        var i = 5;
+        function a() {
+            var i = 10;
+            b(); // 호출(사용)될때
+        }
+
+        // b()가 사용될때가 아닌 정의된 시점에서의 전역변수가 사용됨
+        // 호출되는 시점에서의 같은 내부 지역변수가 있더래도
+        // 정의된 시점에서의 같은 전역변수가 사용되므로 아래 결과는 i = 5
+        // 정적 유효범위
+        function b() {
+            // 여기 i값이 지역변수인 i값을 먼저 찾음
+            // 하지만 지역변수i값이 없음 => 전역변수 i를 찾음.
+            document.write(i);
+        }
+        a();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유효범위 대상</title>
+</head>
+<body>
+    <script>
+        // 자바스크립트에서는 스코프 유효범위가 블록단위로 제공하지않는다.
+        // 즉 아래코드 결과는 my_name이다
+        for (var i = 0; i < 10; i++) {
+            var name = 'my_name';
+        }
+        alert(name);
+
+
+        // JAVA에서의 코드
+        // 오류. 블록단위에서만 유효한 변수 name
+        // for (int i = 0; i < 10; i++) {
+            // String name = "my_name_is";
+        // }
+        // System.out.println(name);
+    </script>
+</body>
+</html>

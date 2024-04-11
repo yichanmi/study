@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>값으로서의 함수2</title>
+</head>
+<body>
+    <script>
+        // 4이 호출될때 동작
+        // var func = function increase(num) { => 1의 매개변수 func
+            // return num + 1;
+        // }
+        // 1
+        function cal(func, num) {
+            return func(num);
+        }
+
+        // 2
+        function increase(num) {
+            return num + 1;
+        }
+
+        // 3
+        function descrease(num) {
+            return num - 1;
+        }
+
+        // 4
+        alert(cal(increase, 1));  // 2
+
+        // 5
+        alert(cal(descrease, 1)); // 0
+    </script>
+</body>
+</html>

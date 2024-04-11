@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스코프2</title>
+</head>
+<body>
+    <script>
+        function a() {
+            i = 0; // 전역변수 i 를 의미
+                    // 즉 a가 실행될때마다 i값이 0으로 초기화되므로
+                    // 아래 for문은 무한반복에 빠진다.
+        }
+        for(var i = 0; i < 5; i++) { // 전역변수 i
+            a();
+            document.write(i);
+        }
+    </script>
+</body>
+</html>
