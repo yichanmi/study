@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>모듈화</title>
+    <script type="text/javascript" src="/javascript/js/greeting.js"></script>
+</head>
+<body>
+    <script>
+        alert(welcome());
+=======
+    <title>모듈</title>
+</head>
+<body>
+    <input type="text" name="txt_name" id="txt" value="gpgp">
+    <input type="submit" class="submit" value="전송">
+    <script>
+        var id_name = document.getElementsByName('txt_name');
+        var func = {
+            name : 'login'
+          , fn : {
+                emptychk : function() {
+                    if (id_name.value == '') {
+                        console.log("!");
+                    }
+                }
+              , emptychk2 : function() {
+                    if (id_name.value == '') {
+                        console.log("ㅇㅇ");
+                        return;
+                    }
+                    console.log("~~~~~");
+                }
+          }
+          , console : {
+                chk : function() {
+                    if (id_name.length < 1) {
+                        console.log("길이 체크 실패");
+                        return;
+                    }
+                    console.log("길이 체크 성공");
+                }
+          }
+        }
+        console.log(func.fn.emptychk2());
+        console.log(func.console.chk());
+>>>>>>> 68cdf85431c7bfcba2aebc5a3712d12cc7c9e77f
+    </script>
+</body>
+</html>
